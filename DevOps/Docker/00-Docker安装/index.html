@@ -12,19 +12,21 @@
         <meta name="author" content="Han Lu">
       
       
-      <link rel="icon" href="/assets/favicon.png">
+        <link rel="canonical" href="https://sbboss.github.io/DevOps/Docker/00-Docker%E5%AE%89%E8%A3%85/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>sbboss</title>
+        <title>00-Docker安装 - sbboss</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.1dff34a1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1dff34a1.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -40,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -74,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#docker" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +91,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="sbboss" class="md-header__button md-logo" aria-label="sbboss" data-md-component="logo">
+    <a href="../../.." title="sbboss" class="md-header__button md-logo" aria-label="sbboss" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -108,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              00-Docker安装
             
           </span>
         </div>
@@ -211,7 +218,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -223,7 +230,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Cloudcomputing
     </a>
   </li>
@@ -235,7 +242,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       HCIE
     </a>
   </li>
@@ -243,6 +250,8 @@
       
         
   
+  
+    
   
 
 
@@ -255,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/DevOps/Docker/00-Docker%E5%AE%89%E8%A3%85/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         DevOps
       </a>
     </li>
@@ -270,7 +279,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Coding
     </a>
   </li>
@@ -282,7 +291,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Coding
     </a>
   </li>
@@ -294,7 +303,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Radio
     </a>
   </li>
@@ -321,7 +330,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="sbboss" class="md-nav__button md-logo" aria-label="sbboss" data-md-component="logo">
+    <a href="../../.." title="sbboss" class="md-nav__button md-logo" aria-label="sbboss" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -357,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -372,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Cloudcomputing
       </a>
     </li>
@@ -387,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         HCIE
       </a>
     </li>
@@ -400,12 +409,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -430,14 +441,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -466,11 +479,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/DevOps/Docker/00-Docker%E5%AE%89%E8%A3%85/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          00-Docker安装
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         00-Docker安装
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    docker是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    Docker的安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker的安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows11" class="md-nav__link">
+    windows11平台上的安装。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linuxdockercentos" class="md-nav__link">
+    在linux平台上安装Docker（以Centos为例）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-osdocker" class="md-nav__link">
+    在Mac os上安装Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -482,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/DevOps/Docker/01-docker%E5%8D%87%E7%BA%A7/" class="md-nav__link">
+      <a href="../01-docker%E5%8D%87%E7%BA%A7/" class="md-nav__link">
         01-docker升级
       </a>
     </li>
@@ -496,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/DevOps/Docker/03-Docker%E9%95%9C%E5%83%8F%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+      <a href="../03-Docker%E9%95%9C%E5%83%8F%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
         03-Docker镜像详解
       </a>
     </li>
@@ -525,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Coding
       </a>
     </li>
@@ -540,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Coding
       </a>
     </li>
@@ -555,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Radio
       </a>
     </li>
@@ -579,6 +667,57 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    docker是什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    Docker的安装
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker的安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows11" class="md-nav__link">
+    windows11平台上的安装。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linuxdockercentos" class="md-nav__link">
+    在linux平台上安装Docker（以Centos为例）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-osdocker" class="md-nav__link">
+    在Mac os上安装Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -589,8 +728,84 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
 
+
+<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h2 id="docker_1">docker是什么？<a class="headerlink" href="#docker_1" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20210903163929936" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903163929936.png" /></p>
+<p>Docker是一种能够运行在windows、linux和Mac os上的软件，用于管理创建和编排容器。Docker是在Github上开发的Moby开源项目的一部分。Docker公司，位于旧金山，是整个Moby开源项目的维护者。Docker公司还提供包含支持服务的商业版本的Docker。</p>
+<p><img alt="image-20210903164521106" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164521106.png" /></p>
+<h2 id="docker_2">Docker的安装<a class="headerlink" href="#docker_2" title="Permanent link">&para;</a></h2>
+<h3 id="windows11">windows11平台上的安装。<a class="headerlink" href="#windows11" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.docker.com/">docker网站</a></p>
+<p><img alt="image-20210903164908723" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164908723.png" /></p>
+<p><img alt="image-20210903164940396" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164940396.png" /></p>
+<p>选择适合的平台下载相应的安装文件。</p>
+<p><img alt="image-20210903165002746" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165002746.png" /></p>
+<p><img alt="image-20210903165022361" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165022361.png" /></p>
+<p>windows版的docker是一个社区版本（Community Edition，CE）的应用，并不是为生产环境设计的。</p>
+<p>本文的安装环境为windows11专业版。这也是笔者第一次尝试安装在windows11上。并未做深入的测试，理论上win10上的安装类似。</p>
+<p><img alt="image-20210903165527415" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165527415.png" /></p>
+<p>对于在windows平台上安装Docker必须满足一下几点。</p>
+<ul>
+<li>windows必须是64bit</li>
+<li>windows必须支持hyper-v和容器特性</li>
+<li>电脑硬件平台需要开启虚拟化VT-X</li>
+</ul>
+<p>需要确认已在在window平台上开启hyper-v和容器特性。</p>
+<p><img alt="image-20210903170029206" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170029206.png" /></p>
+<p><img alt="image-20210903170038754" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170038754.png" /></p>
+<p><img alt="image-20210903170046229" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170046229.png" /></p>
+<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170053254.png" alt="image-20210903170053254" style="zoom:33%;" /></p>
+<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170103848.png" alt="image-20210903170103848" style="zoom:33%;" /></p>
+<p>在docker官方网站下载docker安装包。并执行安装运行即可。</p>
+<p><img alt="image-20210903170242490" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170242490.png" /></p>
+<p>安装成功以后在windows平台上使用终端工具输入</p>
+<div class="highlight"><pre><span></span><code>docker version
+</code></pre></div>
+<p>查看是否安装成功。</p>
+<p><img alt="451630660055_.pic" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/451630660055_.pic.jpg" /></p>
+<h3 id="linuxdockercentos">在linux平台上安装Docker（以Centos为例）<a class="headerlink" href="#linuxdockercentos" title="Permanent link">&para;</a></h3>
+<p>安装docker</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># sudo yum install docker-ce docker-ce-cli containerd.io</span>
+</code></pre></div>
+<p>启动docker</p>
+<div class="highlight"><pre><span></span><code>[root@centos-docker ~]#  sudo systemctl start docker
+</code></pre></div>
+<p>测试docker是否正常安装</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># docker run hello-world</span>
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ <span class="m">1</span>. The Docker client contacted the Docker daemon.
+ <span class="m">2</span>. The Docker daemon pulled the <span class="s2">&quot;hello-world&quot;</span> image from the Docker Hub.
+    <span class="o">(</span>amd64<span class="o">)</span>
+ <span class="m">3</span>. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ <span class="m">4</span>. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started
+</code></pre></div>
+<h3 id="mac-osdocker">在Mac os上安装Docker<a class="headerlink" href="#mac-osdocker" title="Permanent link">&para;</a></h3>
+<p>下载Docker应用</p>
+<p><img alt="image-20210903173201081" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173201081.png" /></p>
+<p><img alt="image-20210903173605433" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173605433.png" /></p>
+<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173624269.png" alt="image-20210903173624269" style="zoom:33%;" /></p>
+<p><img alt="image-20210903173938964" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173938964.png" /></p>
+<p><img alt="image-20210903174239102" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903174239102.png" /></p>
+
+              
             </article>
             
           </div>
@@ -604,6 +819,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: HCIE" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              HCIE
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../01-docker%E5%8D%87%E7%BA%A7/" class="md-footer__link md-footer__link--next" aria-label="Next: 01-docker升级" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              01-docker升级
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -678,10 +929,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.c99f48ec.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c99f48ec.min.js"></script>
       
     
   </body>
