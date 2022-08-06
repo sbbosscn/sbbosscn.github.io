@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,7 +12,7 @@
         <meta name="author" content="Han Lu">
       
       
-        <link rel="canonical" href="https://sbboss.github.io/DevOps/Docker/03-Docker%E9%95%9C%E5%83%8F%E8%AF%A6%E8%A7%A3/">
+        <link rel="canonical" href="https://www.sbboss.cn/DevOps/Docker/03-Docker%E9%95%9C%E5%83%8F%E8%AF%A6%E8%A7%A3/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
@@ -52,6 +52,9 @@
   
 
 
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
 
     
     
@@ -78,7 +81,7 @@
       
         
         <a href="#03-docker" class="md-skip">
-          Skip to content
+          跳转至
         </a>
       
     </div>
@@ -90,7 +93,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="sbboss" class="md-header__button md-logo" aria-label="sbboss" data-md-component="logo">
       
   
@@ -153,18 +156,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -176,7 +179,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -187,13 +190,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://sbboss.cn" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/sbbosscn/sbbosscn.github.io" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    HanLu/Cloudcomputing
+    HanLu/sbboss
   </div>
 </a>
       </div>
@@ -208,7 +211,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -303,8 +306,20 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../../../Radio/test/" class="md-tabs__link">
       Radio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Gym
     </a>
   </li>
 
@@ -328,7 +343,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="sbboss" class="md-nav__button md-logo" aria-label="sbboss" data-md-component="logo">
       
@@ -345,13 +360,13 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://sbboss.cn" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/sbbosscn/sbbosscn.github.io" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    HanLu/Cloudcomputing
+    HanLu/sbboss
   </div>
 </a>
     </div>
@@ -529,7 +544,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -538,7 +553,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -699,8 +714,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../Radio/test/" class="md-nav__link">
         Radio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Gym
       </a>
     </li>
   
@@ -719,7 +749,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -728,7 +758,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -841,6 +871,10 @@
             <article class="md-content__inner md-typeset">
               
                 
+  <a href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/03-Docker镜像详解.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
 
 
 <h1 id="03-docker">03-Docker镜像详解<a class="headerlink" href="#03-docker" title="Permanent link">&para;</a></h1>
@@ -858,20 +892,20 @@
 <p>Linux Docker主机本地镜像仓库通常位于/var/lib/docker/[storage-dirver],在此处的storage-dirver指的是使用的存储驱动的类型。在不同版本的docker中使用的存储驱动类型并不总是一致的。本次安装的Docker 版本为：Docker Version：20.10.8 Storage Driver：overlay。除此之外Storage Diver还有extfs，overlay2等。</p>
 <p>​   例子：</p>
 <p>使用：docker system info可以查看docker的信息,其中包含存储驱动类型。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker system info</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># docker system info</span>
 </code></pre></div>
 <p><img alt="image-20210906215032969" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906215032969.png" />    </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># cd /var/lib/docker/overlay</span>
-<span class="c1"># ll</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># cd /var/lib/docker/overlay</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># ll</span>
 </code></pre></div>
 <p><img alt="image-20210906214450299" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906214450299.png" /></p>
 <p>上图中蓝色字符为镜像的Image ID</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># docker image ls</span>
 </code></pre></div>
 <p><img alt="image-20210906214838822" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906214838822.png" /></p>
 <p>值得说明的一点是，在使用docker image ls命令时。显示出来的Image ID实际上并不是完整的Image ID是实际Image ID的最后几位。</p>
 <p>拉取镜像：</p>
-<div class="highlight"><pre><span></span><code># docker image pull node:latest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># docker image pull node:latest
 </code></pre></div>
 <p><img alt="image-20210906221431664" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906221431664.png" /></p>
 <h2 id="3docker-hub">3.镜像来源Docker Hub<a class="headerlink" href="#3docker-hub" title="Permanent link">&para;</a></h2>
@@ -882,14 +916,14 @@
 <p>​   只要给出镜像的名字和标签就能够从官方的镜像仓库中定位一个镜像。镜像的名字和标签之间使用的的是“:”进行分割，例如从官方拉取镜像时docker image pull的命令格式如下。</p>
 <p>​   docker image pull [repostiory:latest]</p>
 <p>从mongo仓库中拉取标签为3.2.0-rc1的镜像</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image pull mongo:3.2.0-rc1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># docker image pull mongo:3.2.0-rc1</span>
 </code></pre></div>
 <p><strong>注意：</strong></p>
 <p>​   如果没有在镜像仓库名称后面指定具体的镜像标签，则Docker会默认拉取标签为latest的镜像。但是latest标签是一个非强制标签，也就是说带有latest标签的镜像并不能够保证该镜像是仓库中最新的镜像。</p>
 <h2 id="6docker-image-ls">6.过滤docker image ls的输出<a class="headerlink" href="#6docker-image-ls" title="Permanent link">&para;</a></h2>
 <p>docker使用 --filter参数来实现对docker image ls输出的过滤。    </p>
 <p>​   下面的实例会返回本地镜像中的悬虚镜像。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls --filter dangling=true</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># docker image ls --filter dangling=true</span>
 </code></pre></div>
 <p><img alt="image-20210906230048181" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906230048181.png" /></p>
 <p>悬虚镜像是那些没有标签的镜像。在列表中展示为**[none]:[none]**。通常出现这种情况，是因为构建了一个新的镜像，然后为该镜像打了一个已经存在的标签。</p>
@@ -902,13 +936,13 @@
 <p>before：需要镜像名称或者ID作为参数，返回之前被创建的所有镜像</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls  --filter brefore=7d0d8fa37224</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># docker image ls  --filter brefore=7d0d8fa37224</span>
 </code></pre></div>
 <p><img alt="image-20210907090209390" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090209390.png" /></p>
 <ul>
 <li>since：与before类似，不过返回的是指定镜像之后创建的所有镜像。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls  --filter since=7d0d8fa37224</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># docker image ls  --filter since=7d0d8fa37224</span>
 </code></pre></div>
 <p><img alt="image-20210907090247745" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090247745.png" /></p>
 <ul>
@@ -919,7 +953,7 @@
 <p>使用reference完成过滤并且仅显示标签为latest的镜像</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls --filter=reference=&quot;*:latest&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># docker image ls --filter=reference=&quot;*:latest&quot;</span>
 </code></pre></div>
 <p><img alt="image-20210907090735746" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090735746.png" /></p>
 <ul>
@@ -930,29 +964,29 @@
 <p>返回主机上镜像大小</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls  --format &quot;{{.Size}}&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># docker image ls  --format &quot;{{.Size}}&quot;</span>
 </code></pre></div>
 <p><img alt="image-20210907091612889" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907091612889.png" /></p>
 <ul>
 <li>使用下面的命令可以返回全部镜像但是只显示仓库，标签和大小信息。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1">#docker image ls --format &quot;{{.Repository}}:    {{.Tag}}:    {{.Size}}&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">#docker image ls --format &quot;{{.Repository}}:    {{.Tag}}:    {{.Size}}&quot;</span>
 </code></pre></div>
 <p><img alt="image-20210907092326218" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907092326218.png" /></p>
 <h2 id="7">7.镜像检索<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p>docker search命令允许通过CLI的方式搜索Docker Hub。通过NAME进行匹配，并基于返回的内容进行过滤。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker search ubuntu</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># docker search ubuntu</span>
 </code></pre></div>
 <p><img alt="image-20210907093719372" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907093719372.png" /></p>
 <p>实际上Docker search默认会返回25条结果；但是我在上面的截图中省略了一部分。</p>
 <p>通过Docker内置的help工具可以知道，docker search 可以通过Options参数来过过滤输出的结果。</p>
 <p><img alt="image-20210907093643826" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907093643826.png" /></p>
 <p>值得注意的是，在使用Docker search ubuntu这条命令时默认输出了25条ubuntu仓库的信息。但是这些仓库并不都是官方仓库。如果你想输出的结果只显示官方仓库那么你就可以使用filter参数对输出的结果尽心过滤。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker search ubuntu --filter &quot;is-official=true&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># docker search ubuntu --filter &quot;is-official=true&quot;</span>
 </code></pre></div>
 <p><img alt="image-20210907094446456" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094446456.png" /></p>
 <p>前面说到Docker search默认只会输出25条结果，你可以通过使用limit参数来增加返回的条目数，但是最大不能超过100条。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker search ubuntu --limit 100</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># docker search ubuntu --limit 100</span>
 </code></pre></div>
 <p><img alt="image-20210907094800059" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094800059.png" /></p>
 <p><img alt="image-20210907094828544" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094828544.png" /></p>
@@ -961,11 +995,11 @@
 <p><img alt="image-20210906182203363" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906182203363.png" /></p>
 <p>​   docker复制堆叠这些镜像层，并且把他们表示为单一统一的对象。</p>
 <p>​   尝试拉取一个镜像。拉取ruby这个镜像，以Already exists结尾的每一行表示本地已经存在的镜像层。以pull complete结尾的是在网上拉取的层。ruby这个镜像总共包含8个层。每个层都使用层ID的形式进行区别。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image pull ruby:latest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># docker image pull ruby:latest</span>
 </code></pre></div>
 <p><img alt="image-20210907095553871" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907095553871.png" /></p>
 <p>查看镜像分层的另一种方式</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image inspect ruby:latest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># docker image inspect ruby:latest</span>
 </code></pre></div>
 <p>截取之后的输出结果同样包含8个层，并且层ID是完整的。没层都是使用sha256的三散列值来标识镜像层。</p>
 <p><img alt="image-20210907100157937" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907100157937.png" /></p>
@@ -994,7 +1028,7 @@
 <p>​   镜像层才是实际存储数据的地方，每个镜像层之间是完全相互独立的，所以不存在镜像集合的概念。</p>
 <p>​   镜像的唯一标识是一个加密的ID，该ID是配置对象本身的散列值，每个镜像层也有一个加密的ID去分，其值是镜像层本身内容的散列值。之前学过一个命令 docker image  inspest [image:latest]。通过这条命令可以查看ImageID和组成Image的各个分层的ID。</p>
 <p>以ruby:latest镜像为例</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image inspect ruby:latest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># docker image inspect ruby:latest</span>
 </code></pre></div>
 <p>Image ID：</p>
 <p><img alt="image-20210907133758053" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907133758053.png" /></p>
@@ -1006,35 +1040,35 @@
 <p>​   删除操作会在当前主机上删除该镜像的以及相关的镜像层。执行完docker image rm [ImageID]之后不能够时候docker image ls看到被删除的镜像。并且被删除的镜像的所包含的镜像层数据的目录也会被删除，但是如果被删除的镜像当中包含被共享的镜像层。之后当共享该镜像层所有的镜像被删除的才会被删除该共享层。</p>
 <p>​   如果被删除的镜像上存在运行状态的容器该镜像也无法被删除会报错。如果要删除该镜像需要在删除镜像之前停止所有使用该镜像的容器。</p>
 <p>显示所有镜像的ID</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image ls -q</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># docker image ls -q</span>
 </code></pre></div>
 <p><img alt="image-20210907135226157" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907135226157.png" /></p>
 <p>批量删除镜像：</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker image rm $(docker image ls -q) -f</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># docker image rm $(docker image ls -q) -f</span>
 </code></pre></div>
 <p><img alt="image-20210907140037614" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907140037614.png" /></p>
 <p>批量停止容器</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker container stop $(docker container ls -q)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># docker container stop $(docker container ls -q)</span>
 </code></pre></div>
 <p>在批量删除镜像之前可以采用批量停止容器之后再做批量删除操作。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker container stop $(docker container ls -q)</span>
-<span class="c1"># docker image rm $(docker image ls -q) -f</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># docker container stop $(docker container ls -q)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1"># docker image rm $(docker image ls -q) -f</span>
 </code></pre></div>
 <h2 id="11">11.镜像的导入和导出<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <h3 id="_1">镜像的导出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p><img alt="image-20210910214837239" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910214837239.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker save -o /test/myalpine.image alpine:latest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># docker save -o /test/myalpine.image alpine:latest</span>
 </code></pre></div>
 <p>或</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker save &gt; /test/myalpine.image alpine:latest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># docker save &gt; /test/myalpine.image alpine:latest</span>
 </code></pre></div>
 <p><img alt="image-20210910220241920" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910220241920.png" /></p>
 <h3 id="_2">镜像的导入<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="image-20210910221429556" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910221429556.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker load -i /test/myalpine.image</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># docker load -i /test/myalpine.image</span>
 </code></pre></div>
 <p>或</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># docker load &lt; /test/myalpine.image</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># docker load &lt; /test/myalpine.image</span>
 </code></pre></div>
 
               
@@ -1045,7 +1079,7 @@
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
+            回到页面顶部
           </a>
         
       </main>
@@ -1053,17 +1087,17 @@
         <footer class="md-footer">
   
     
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../01-docker%E5%8D%87%E7%BA%A7/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01-docker升级" rel="prev">
+        <a href="../01-docker%E5%8D%87%E7%BA%A7/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 01-docker升级" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Previous
+                上一页
               </span>
               01-docker升级
             </div>
@@ -1072,11 +1106,11 @@
       
       
         
-        <a href="../../.." class="md-footer__link md-footer__link--next" aria-label="Next: Coding" rel="next">
+        <a href="../../.." class="md-footer__link md-footer__link--next" aria-label="下一页: Coding" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                下一页
               </span>
               Coding
             </div>
@@ -1104,55 +1138,6 @@
   
 </div>
       
-        <div class="md-social">
-  
-    
-    
-      
-      
-    
-    <a href="https://github.com/squidfunk" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-    </a>
-  
-    
-    
-      
-      
-    
-    <a href="https://gitter.im/squidfunk/mkdocs-material" target="_blank" rel="noopener" title="gitter.im" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
-    </a>
-  
-    
-    
-      
-      
-    
-    <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
-    </a>
-  
-    
-    
-      
-      
-    
-    <a href="https://pypi.org/project/mkdocs-material/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
-    </a>
-  
-    
-    
-      
-      
-    
-    <a href="https://twitter.com/squidfunk" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-    </a>
-  
-</div>
-      
     </div>
   </div>
 </footer>
@@ -1161,7 +1146,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c99f48ec.min.js"></script>
