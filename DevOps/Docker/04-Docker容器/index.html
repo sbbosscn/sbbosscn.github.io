@@ -500,144 +500,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.启动容器
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5.容器进程
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6.容器的生命周期
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    7.容器的重启策略
-  </a>
-  
-    <nav class="md-nav" aria-label="7.容器的重启策略">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#always" class="md-nav__link">
-    always
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unless-stopped" class="md-nav__link">
-    unless-stopped
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8docker" class="md-nav__link">
-    8.快速清理所有的docker容器
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
-    9.查看容器的配置细节和运行时信息。
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10" class="md-nav__link">
-    10.导出容器
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    11.导入容器
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    12.文件拷贝
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    13.目录挂载（容器数据卷操作）
-  </a>
-  
-    <nav class="md-nav" aria-label="13.目录挂载（容器数据卷操作）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    指定目录挂载
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    匿名挂载
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    具名挂载
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    只读/读写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-from" class="md-nav__link">
-    volumes-from（继承）
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14ip" class="md-nav__link">
-    14.查看容器IP
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -684,52 +546,56 @@
 <p><img alt="image-20210907210845943" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907210845943.png" /></p>
 <h2 id="3docker-daemo">3.检查docker Daemo<a class="headerlink" href="#3docker-daemo" title="Permanent link">&para;</a></h2>
 <p>通常登录Docker主机的第一件事就是检查Docker是否在运行状态。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[root@Docker ~]# docker version
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Client: Docker Engine - Community
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> Version:           20.10.8
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> API version:       1.41
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> Go version:        go1.16.6
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a> Git commit:        3967b7d
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a> Built:             Fri Jul 30 19:55:49 2021
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> OS/Arch:           linux/amd64
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a> Context:           default
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a> Experimental:      true
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Server: Docker Engine - Community
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a> Engine:
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  Version:          20.10.8
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  API version:      1.41 (minimum version 1.12)
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  Go version:       go1.16.6
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  Git commit:       75249d8
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  Built:            Fri Jul 30 19:54:13 2021
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  OS/Arch:          linux/amd64
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  Experimental:     false
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a> containerd:
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  Version:          1.4.9
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  GitCommit:        e25210fe30a0a703442421b0f60afac609f950a3
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a> runc:
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>  Version:          1.0.1
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>  GitCommit:        v1.0.1-0-g4144b63
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a> docker-init:
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>  Version:          0.19.0
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>  GitCommit:        de40ad0
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-version">docker version<a class="headerlink" href="#docker-version" title="Permanent link">&para;</a></h1>
+<p>```</p>
+<p>```
+[root@Docker ~]# docker version
+Client: Docker Engine - Community
+ Version:           20.10.8
+ API version:       1.41
+ Go version:        go1.16.6
+ Git commit:        3967b7d
+ Built:             Fri Jul 30 19:55:49 2021
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true</p>
+<p>Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.8
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.6
+  Git commit:       75249d8
+  Built:            Fri Jul 30 19:54:13 2021
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.4.9
+  GitCommit:        <a class="magiclink magiclink-github magiclink-commit" href="https://github.com/squidfunk/mkdocs-material/commit/e25210fe30a0a703442421b0f60afac609f950a3" title="GitHub Commit: squidfunk/mkdocs-material@e25210f">e25210f</a>
+ runc:
+  Version:          1.0.1
+  GitCommit:        v1.0.1-0-g4144b63
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+```</p>
 <p>当输出的内容包含Client和Server的内容时，表示Docker Daemon正在运行。</p>
 <p>如果Docker Daemon没有处在运行状态可以使用</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># service docker status</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="service-docker-status">service docker status<a class="headerlink" href="#service-docker-status" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>启动docker daemon，只要显示如下内容表示启动成功。</p>
 <p><img alt="image-20210907212221584" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907212221584.png" /></p>
 <h2 id="4">4.启动容器<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># docker container run -it ubuntu:latest /bin/bash</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-it-ubuntulatest-binbash">docker container run -it ubuntu:latest /bin/bash<a class="headerlink" href="#docker-container-run-it-ubuntulatest-binbash" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>如果本地有相关镜像就直接将镜像启动为容器。</p>
 <p><img alt="image-20210907212447696" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907212447696.png" /></p>
 <p>如果要启动的容器的镜像不在本地，那么启动镜像需要先从网络上的仓库进行下载。下载完成后才能运行。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># docker container run -it node </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-it-node">docker container run -it node<a class="headerlink" href="#docker-container-run-it-node" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907213004735" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907213004735.png" /></p>
 <h2 id="5">5.容器进程<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>在启动ubuntu镜像运行Bash shell（/bin/bash）。这使得**bash shell成为该容器中唯一运行的进程**，但是使用ps -elf查看进程是发现ubuntu容器中实际上包含两个进程。列表中PID为1 的是容器中运行的bash shell进程表，而PID 10是ps -elf产生的，这是一个临时进程，在输出结果后该进程就退出了。</p>
@@ -739,65 +605,73 @@
 <p>​   一个比较重要的问题，容器能够对数据进行持久化操作吗？<strong>容器是可以对数据进行持久化操作的</strong>。</p>
 <p>​   本次实验会创建一个新的容器，用来观察该容器完整的生命周期。</p>
 <p>1.启动一个ubuntu:latest容器并将其命名为percy</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># docker container run --name percy -it /bin/bash</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-name-percy-it-binbash">docker container run --name percy -it /bin/bash<a class="headerlink" href="#docker-container-run-name-percy-it-binbash" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>2.将数据写入到tmp目录下的某个文件</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>root@eea152e1190b:/# <span class="nb">cd</span> tmp/
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>root@eea152e1190b:/tmp# ll
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>total <span class="m">0</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>drwxrwxrwt. <span class="m">2</span> root root <span class="m">6</span> Aug <span class="m">27</span> <span class="m">07</span>:27 ./
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>drwxr-xr-x. <span class="m">1</span> root root <span class="m">6</span> Sep  <span class="m">8</span> <span class="m">01</span>:49 ../
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>root@eea152e1190b:/tmp# <span class="nb">echo</span> <span class="s2">&quot;Miaomiao&quot;</span> &gt; myheart
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>root@eea152e1190b:/tmp# ls -l
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>total <span class="m">4</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>-rw-r--r--. <span class="m">1</span> root root <span class="m">9</span> Sep  <span class="m">8</span> <span class="m">01</span>:55 myheart
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>root@eea152e1190b:/tmp# cat myheart
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Miaomiao
-</code></pre></div>
+<p><code>shell
+root@eea152e1190b:/# cd tmp/
+root@eea152e1190b:/tmp# ll
+total 0
+drwxrwxrwt. 2 root root 6 Aug 27 07:27 ./
+drwxr-xr-x. 1 root root 6 Sep  8 01:49 ../
+root@eea152e1190b:/tmp# echo "Miaomiao" &gt; myheart
+root@eea152e1190b:/tmp# ls -l
+total 4
+-rw-r--r--. 1 root root 9 Sep  8 01:55 myheart
+root@eea152e1190b:/tmp# cat myheart
+Miaomiao</code></p>
 <p><img alt="image-20210908095550058" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908095550058.png" /></p>
 <p>3.接下来停止运行percy容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># docker container stop percy</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-stop-percy">docker container stop percy<a class="headerlink" href="#docker-container-stop-percy" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908100507540" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908100507540.png" /></p>
 <p>4.查看percy容器是否还在运行状态。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># docker container ls </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls">docker container ls<a class="headerlink" href="#docker-container-ls" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>正在运行中的容器中已经没有名称为percy的容器了，证明该容器已经停止运行。</p>
 <p><img alt="image-20210908100808243" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908100808243.png" /></p>
 <p>5.查看所有容器的状态包括处于停止状态的容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># docker container ls -a</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls-a">docker container ls -a<a class="headerlink" href="#docker-container-ls-a" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908101827312" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908101827312.png" /></p>
 <p>6.重启percy容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># docker container start percy</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-start-percy">docker container start percy<a class="headerlink" href="#docker-container-start-percy" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908101925655" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908101925655.png" /></p>
 <p>7.查看percy容器的是否被启动</p>
 <p><img alt="image-20210908102016159" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908102016159.png" /></p>
 <p>8.连接到percy容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># docker container exec -it percy /bin/bash</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-exec-it-percy-binbash">docker container exec -it percy /bin/bash<a class="headerlink" href="#docker-container-exec-it-percy-binbash" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908102202155" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908102202155.png" /></p>
 <p>9.查看percy容器中创建的文件是否存在</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>root@eea152e1190b:/# <span class="nb">cd</span> tmp/
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>root@eea152e1190b:/tmp# ll
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>total <span class="m">4</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>drwxrwxrwt. <span class="m">1</span> root root <span class="m">21</span> Sep  <span class="m">8</span> <span class="m">01</span>:55 ./
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>drwxr-xr-x. <span class="m">1</span> root root <span class="m">29</span> Sep  <span class="m">8</span> <span class="m">01</span>:49 ../
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>-rw-r--r--. <span class="m">1</span> root root  <span class="m">9</span> Sep  <span class="m">8</span> <span class="m">01</span>:55 myheart
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>root@eea152e1190b:/tmp# cat myheart
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Miaomiao
-</code></pre></div>
+<p><code>shell
+root@eea152e1190b:/# cd tmp/
+root@eea152e1190b:/tmp# ll
+total 4
+drwxrwxrwt. 1 root root 21 Sep  8 01:55 ./
+drwxr-xr-x. 1 root root 29 Sep  8 01:49 ../
+-rw-r--r--. 1 root root  9 Sep  8 01:55 myheart
+root@eea152e1190b:/tmp# cat myheart
+Miaomiao</code></p>
 <p>容器重启后，之前在容器中创建的文件依然存在，并且文件中包含的数据并没有发生变更。这说明容器重启或者停止运行都不会损毁容器和其中的数据。</p>
 <p>​   上面的实验说明了容器是能够进行数据的持久化存储的，但是实际上卷（volume）才是容器中存储持久化数据的首选方式。</p>
 <p>直接删除运行中的容器。</p>
 <p>​   首先查看正在运行中的容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># docker container ls </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls_1">docker container ls<a class="headerlink" href="#docker-container-ls_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>​   <img alt="image-20210908103756418" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908103756418.png" /></p>
 <p>删除容器可以使用Container ID或者是容器的名称（名称可以自动生成也可以人为指定）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># docker container rm percy  cb9162562fbe -f</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-rm-percy-cb9162562fbe-f">docker container rm percy  cb9162562fbe -f<a class="headerlink" href="#docker-container-rm-percy-cb9162562fbe-f" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908104118157" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908104118157.png" /></p>
 <p>虽然使用 -f参数可以直接不加提示的产出运行中的容器；但是非常不建议这么做。在生产活动中删除容器最好还是分两步：1.停止正在运行中的容器 2.删除停止的容器。这样才足够优雅。</p>
 <p>​   容器的生命周期；包含了容器的启动，运行，停止，暂停等多次操作。除非删除容器，否则容器并不会丢失其中的数据。但是如果数据是存放在卷当中的，即使删除卷，数据也会被保存下来。</p>
@@ -826,61 +700,73 @@
 </ul>
 <p>默认策略，在容器退出时不重启容器。</p>
 <h3 id="always">always<a class="headerlink" href="#always" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># docker container run --name always -it --restart always ubuntu:latest /bin/bash</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-name-always-it-restart-always-ubuntulatest-binbash">docker container run --name always -it --restart always ubuntu:latest /bin/bash<a class="headerlink" href="#docker-container-run-name-always-it-restart-always-ubuntulatest-binbash" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>用命令查看运行中的容器发现CREATE时间是4minutes之前，但是启动时间是11seconds之前。表示在执行exit退出后，docker显示自动杀死了这个容器进程然后出发了容器的always策略自动将容器重启了。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># docker container ls </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls_2">docker container ls<a class="headerlink" href="#docker-container-ls_2" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908141851218" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908141851218.png" /></p>
 <p>在always策略的容器停止的情况下，重启docker deamon；发现always策略的容器自动重启了。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># docker container stop always </span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># docker container ls -a</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="c1"># systemctl restart docker </span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># docker container ls </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-stop-always">docker container stop always<a class="headerlink" href="#docker-container-stop-always" title="Permanent link">&para;</a></h1>
+<h1 id="docker-container-ls-a_1">docker container ls -a<a class="headerlink" href="#docker-container-ls-a_1" title="Permanent link">&para;</a></h1>
+<h1 id="systemctl-restart-docker">systemctl restart docker<a class="headerlink" href="#systemctl-restart-docker" title="Permanent link">&para;</a></h1>
+<h1 id="docker-container-ls_3">docker container ls<a class="headerlink" href="#docker-container-ls_3" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908143157410" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908143157410.png" /></p>
 <h3 id="unless-stopped">unless-stopped<a class="headerlink" href="#unless-stopped" title="Permanent link">&para;</a></h3>
 <p>创建一个重启策略为unless-stopped的容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># docker container run --name unless-stopped -it --restart unless-stopped ubuntu:latest /bin/bash</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-name-unless-stopped-it-restart-unless-stopped-ubuntulatest-binbash">docker container run --name unless-stopped -it --restart unless-stopped ubuntu:latest /bin/bash<a class="headerlink" href="#docker-container-run-name-unless-stopped-it-restart-unless-stopped-ubuntulatest-binbash" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908144144021" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144144021.png" />退出容器之后；查看该容器的策略是否执行。显示容器的创建时间是22秒前，但是创建时间是7秒前。表示出发了unless-stopped策略，将容器重启了。</p>
 <p><img alt="image-20210908144205240" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144205240.png" /></p>
 <p>使用命令手动停止运行中的容器。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># docker container stop unless-stopped</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-stop-unless-stopped">docker container stop unless-stopped<a class="headerlink" href="#docker-container-stop-unless-stopped" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908144532920" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144532920.png" /></p>
 <p>查看容器的状态</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># docker container ls -a</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls-a_2">docker container ls -a<a class="headerlink" href="#docker-container-ls-a_2" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908144559016" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144559016.png" /></p>
 <p>重启docker deamon</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a># systemctl restart docker 
-</code></pre></div>
+<p>```</p>
+<h1 id="systemctl-restart-docker_1">systemctl restart docker<a class="headerlink" href="#systemctl-restart-docker_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908144630355" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144630355.png" /></p>
 <p>在此查看该容器的状态发现容器没有被启动</p>
 <p><img alt="image-20210908144852268" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908144852268.png" /></p>
 <h2 id="8docker">8.快速清理所有的docker容器<a class="headerlink" href="#8docker" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># docker container rm $(docker container ls -aq) -f</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-rm-docker-container-ls-aq-f">docker container rm $(docker container ls -aq) -f<a class="headerlink" href="#docker-container-rm-docker-container-ls-aq-f" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <h2 id="9">9.查看容器的配置细节和运行时信息。<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 <p>可以使用容器ID或者容器名</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># docker container inspect ubuntutest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-inspect-ubuntutest">docker container inspect ubuntutest<a class="headerlink" href="#docker-container-inspect-ubuntutest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210908173424947" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210908173424947.png" /></p>
 <h2 id="10">10.导出容器<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
 <p>如果要导出本地某个容器，可以使用docker export命令</p>
 <p>​   查看容器的ID或者名称</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># docker container ls </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-ls_4">docker container ls<a class="headerlink" href="#docker-container-ls_4" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210909001104061" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210909001104061.png" /></p>
 <p>​   导出容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># docker container export 9ecb95ba5b7e &gt; nginx.tar</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-export-9ecb95ba5b7e-nginxtar">docker container export 9ecb95ba5b7e &gt; nginx.tar<a class="headerlink" href="#docker-container-export-9ecb95ba5b7e-nginxtar" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210909001335283" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210909001335283.png" /></p>
 <h2 id="11">11.导入容器<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <p>如果要导入本地某个容器，可以使用docker import命令</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># docker import xxx.tar &lt;image:Ltag&gt;</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-import-xxxtar">docker import xxx.tar <image:Ltag><a class="headerlink" href="#docker-import-xxxtar" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <h2 id="12">12.文件拷贝<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
 <h2 id="13">13.目录挂载（容器数据卷操作）<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
 <p>​   在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样就可以通过修改宿主机某个目录的文件从而去影响容器，而且这个操作是双向绑定的，也就是说容器内的操作也会影响到宿主机实现备份功能。</p>
@@ -890,52 +776,62 @@
 <p>​   将宿主机的一个一个目录/dockervolume挂载给新创建的容器centos7_01的/usr/local/data_volume。</p>
 <h3 id="_1">指定目录挂载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>1.在宿主机创建挂载目录dockervolume;并在其中创建dockervolume.txt文件。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># mkdir /dockervolume</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="c1"># cd /dockervolume</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c1"># vi dockervolume.txt</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="mkdir-dockervolume">mkdir /dockervolume<a class="headerlink" href="#mkdir-dockervolume" title="Permanent link">&para;</a></h1>
+<h1 id="cd-dockervolume">cd /dockervolume<a class="headerlink" href="#cd-dockervolume" title="Permanent link">&para;</a></h1>
+<h1 id="vi-dockervolumetxt">vi dockervolume.txt<a class="headerlink" href="#vi-dockervolumetxt" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914164947654" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914164947654.png" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1">#docker container run  -di -v /dockervolume:/usr/local/data_volume --name centos7_01 centos:7</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-di-v-dockervolumeusrlocaldata_volume-name-centos7_01-centos7">docker container run  -di -v /dockervolume:/usr/local/data_volume --name centos7_01 centos:7<a class="headerlink" href="#docker-container-run-di-v-dockervolumeusrlocaldata_volume-name-centos7_01-centos7" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914165223248" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914165223248.png" /></p>
 <p>2.在容器内查看是否有挂载目录；内容是否与宿主机一致</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># cd /usr/local/data_volume</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="c1"># ls</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="c1"># cat dockervolume.txtcen</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="cd-usrlocaldata_volume">cd /usr/local/data_volume<a class="headerlink" href="#cd-usrlocaldata_volume" title="Permanent link">&para;</a></h1>
+<h1 id="ls">ls<a class="headerlink" href="#ls" title="Permanent link">&para;</a></h1>
+<h1 id="cat-dockervolumetxtcen">cat dockervolume.txtcen<a class="headerlink" href="#cat-dockervolumetxtcen" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914165604040" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914165604040.png" /></p>
 <p>多目录挂载：</p>
 <p>​   同时将多个目录挂载到同一个容器。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># docker container run -di -v /宿主机目录:/容器目录 -v /宿主机目录2:/容器目录 镜像名</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-run-di-v-v-2">docker container run -di -v /宿主机目录:/容器目录 -v /宿主机目录2:/容器目录 镜像名<a class="headerlink" href="#docker-container-run-di-v-v-2" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>目录挂载操作可能会出现权限不足的提示，这是因为centos7中的安全模块SELinux吧权限禁掉了，在docker run时通过 --privilege=true给该容器增加权限来解决权限不足的问题。</p>
 <h3 id="_2">匿名挂载<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>​   匿名挂载只需要写容器目录即可，容器外对应的目录会在/var/lib/docker/volume中生成。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># docker  run -di -v /usr/local/niming --name niming  centos:7</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-run-di-v-usrlocalniming-name-niming-centos7">docker  run -di -v /usr/local/niming --name niming  centos:7<a class="headerlink" href="#docker-run-di-v-usrlocalniming-name-niming-centos7" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>​   使用docker inspect <ContainerName/Container ID>能够找到容器上的挂载目录对应在宿主机上的位置。<img alt="image-20210914201147338" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914201147338.png" /></p>
 <h3 id="_3">具名挂载<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>​   具名挂载就是给互数据卷起了个名字，容器外对应的目录会在/var/lib/docker/volume</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># docker run -di -v 容器挂载点名称:挂载点位置 --name 容器名 镜像</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># docker  run -di -v docker_centos_data:/usr/local/niming --name niming  centos:8</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-run-di-v-name">docker run -di -v 容器挂载点名称:挂载点位置 --name 容器名 镜像<a class="headerlink" href="#docker-run-di-v-name" title="Permanent link">&para;</a></h1>
+<p>```</p>
+<p>```shell</p>
+<h1 id="docker-run-di-v-docker_centos_datausrlocalniming-name-niming-centos8">docker  run -di -v docker_centos_data:/usr/local/niming --name niming  centos:8<a class="headerlink" href="#docker-run-di-v-docker_centos_datausrlocalniming-name-niming-centos8" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914203916540" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914203916540.png" /></p>
 <h3 id="_4">只读/读写<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h3 id="volumes-from">volumes-from（继承）<a class="headerlink" href="#volumes-from" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>// 容器centos7-01指定挂载目录
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="c1"># docker run -di -v /mydata/docker_centos/data:/usr/local/data --name centos7-01 centos:7</span>
-<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>// 容器centos7-04 和centos7-05 相当于继承centos7-01容器的挂载目录
-<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="c1"># docker run -di --volumes-from centos7-01 --name centos7-04 centos:7</span>
-<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="c1"># docker run -di --volumes-from centos7-01 --name centos7-05 centos:7</span>
-</code></pre></div>
+<p>```shell
+// 容器centos7-01指定挂载目录</p>
+<h1 id="docker-run-di-v-mydatadocker_centosdatausrlocaldata-name-centos7-01-centos7">docker run -di -v /mydata/docker_centos/data:/usr/local/data --name centos7-01 centos:7<a class="headerlink" href="#docker-run-di-v-mydatadocker_centosdatausrlocaldata-name-centos7-01-centos7" title="Permanent link">&para;</a></h1>
+<p>// 容器centos7-04 和centos7-05 相当于继承centos7-01容器的挂载目录</p>
+<h1 id="docker-run-di-volumes-from-centos7-01-name-centos7-04-centos7">docker run -di --volumes-from centos7-01 --name centos7-04 centos:7<a class="headerlink" href="#docker-run-di-volumes-from-centos7-01-name-centos7-04-centos7" title="Permanent link">&para;</a></h1>
+<h1 id="docker-run-di-volumes-from-centos7-01-name-centos7-05-centos7">docker run -di --volumes-from centos7-01 --name centos7-05 centos:7<a class="headerlink" href="#docker-run-di-volumes-from-centos7-01-name-centos7-05-centos7" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <h2 id="14ip">14.查看容器IP<a class="headerlink" href="#14ip" title="Permanent link">&para;</a></h2>
 <p>可以通过 dokcer inspect 容器名称|容器ID查看容器的元信息</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># docker inspect niming01</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-inspect-niming01">docker inspect niming01<a class="headerlink" href="#docker-inspect-niming01" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914204949452" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914204949452.png" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># docker inspect --format=&#39;{{.NetworkSettings.IPAddress}}&#39; niming01</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-inspect-formatnetworksettingsipaddress-niming01">docker inspect --format='{{.NetworkSettings.IPAddress}}' niming01<a class="headerlink" href="#docker-inspect-formatnetworksettingsipaddress-niming01" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210914205537140" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210914205537140.png" /></p>
 
               

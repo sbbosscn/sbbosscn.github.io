@@ -514,29 +514,36 @@
 <p>以Centos7为例</p>
 <p>将Centos7上的Docker从17.03.0升级到最新版本。</p>
 <p>1.查看当前的Docker版本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-version">docker version<a class="headerlink" href="#docker-version" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906104425733" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104425733.png" /></p>
 <p>2.移除旧版本的Docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># yum remove docker docker-engine docker-ce docker.io -y</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="yum-remove-docker-docker-engine-docker-ce-dockerio-y">yum remove docker docker-engine docker-ce docker.io -y<a class="headerlink" href="#yum-remove-docker-docker-engine-docker-ce-dockerio-y" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906104629484" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104629484.png" /></p>
 <p>3.升级centos的软件包</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># yum update    </span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="yum-update">yum update<a class="headerlink" href="#yum-update" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>3.使用脚本安装最新版本的Docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># wget -qO- https://get.docker.com/ | sh</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="wget-qo-httpsgetdockercom-sh">wget -qO- <a href="https://get.docker.com/">https://get.docker.com/</a> | sh<a class="headerlink" href="#wget-qo-httpsgetdockercom-sh" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>4.等待升级完成查看当前的docker版本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-version_1">docker version<a class="headerlink" href="#docker-version_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>5.将docker设置为开机自动启动</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># systemctl start docker</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># systemctl enable docker</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="systemctl-start-docker">systemctl start docker<a class="headerlink" href="#systemctl-start-docker" title="Permanent link">&para;</a></h1>
+<h1 id="systemctl-enable-docker">systemctl enable docker<a class="headerlink" href="#systemctl-enable-docker" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>6.查看当前的docker版本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-version_2">docker version<a class="headerlink" href="#docker-version_2" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906105441367" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906105441367.png" /></p>
 
               
