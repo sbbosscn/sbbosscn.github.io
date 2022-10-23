@@ -12,14 +12,14 @@
         <meta name="author" content="Han Lu">
       
       
-        <link rel="canonical" href="https://www.sbboss.cn/DevOps/Docker/05-Docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA/">
+        <link rel="canonical" href="https://www.sbboss.cn/DevOps/Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Docker镜像构建 - sbboss</title>
+        <title>00-pnetlab从安装到登录 - sbboss</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#pnetlab" class="md-skip">
           跳转至
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker镜像构建
+              00-pnetlab从安装到登录
             
           </span>
         </div>
@@ -254,6 +254,8 @@
         
   
   
+    
+  
 
 
   
@@ -265,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         DevOps
       </a>
     </li>
@@ -410,12 +412,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -440,14 +444,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -472,11 +478,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          00-pnetlab从安装到登录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         00-pnetlab从安装到登录
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1pnetlab" class="md-nav__link">
+    1.什么是PNETLab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.硬件要求
+  </a>
+  
+    <nav class="md-nav" aria-label="2.硬件要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    支持的虚拟化平台和软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    不受支持的硬件和系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3pnetlab" class="md-nav__link">
+    3.安装PNETLab
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -560,6 +641,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1pnetlab" class="md-nav__link">
+    1.什么是PNETLab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.硬件要求
+  </a>
+  
+    <nav class="md-nav" aria-label="2.硬件要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    支持的虚拟化平台和软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    不受支持的硬件和系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3pnetlab" class="md-nav__link">
+    3.安装PNETLab
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -570,53 +700,328 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/05-Docker镜像构建.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Network/00pnetlab从安装到登录.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="docker">Docker镜像构建<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<p>​   我们可以通过公关仓库拉取镜像使用，但是，有些时候公共仓库拉取的镜像并不符合我们的需求，尽管已经从繁琐的部署工作中解放出来，但是实际开发时，我们希望镜像包含整个项目的完整环境，在其他机器上拉取打包完整的镜像，直接运行即可。</p>
+<h1 id="pnetlab">PNETLab从安装到登录<a class="headerlink" href="#pnetlab" title="Permanent link">&para;</a></h1>
+<iframe src="//player.bilibili.com/player.html?aid=731842197&bvid=BV1PD4y1k7Mp&cid=870002982&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
+
+<h2 id="1pnetlab">1.什么是PNETLab<a class="headerlink" href="#1pnetlab" title="Permanent link">&para;</a></h2>
+<p>PNETlab（Packet Network Emulate Tool Lab）是一款允许下载并可以共享的社区版共享实验平台。它由两部分组成。包括PNETLab Box和PNETLab Store。</p>
 <ul>
-<li>docker commit:从容器创建一个新的镜像</li>
-<li>docker build:配合Dockerfile文件创建镜像</li>
+<li>PNETLab Box（具有离线和在线两种模式）是一款安装在虚拟机上的运行环境。</li>
+<li>PNETLab Store是一个网络平台，上面有基于PNETLab多种免费实验环境，涵盖了数据库，数据通信，操作系统等领域。</li>
 </ul>
-<p>1.创建容器</p>
-<p><img alt="image-20210915102430231" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102430231.png" /></p>
-<p>2.拷贝资源</p>
-<p><img alt="image-20210915102646421" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png" /></p>
-<p>3.解压资源；调整配置文件</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># cd /root/</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># mkdir -p /usr/local/java</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># mkdir -p /usr/local/tomcat</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># tar -zxvf apache-tomcat-9.0.53.tar.gz -C /usr/local/tomcat</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># tar -zxvf openlogic-openjdk-8u262-b10-linux-x64.tar.gz -C /usr/local/java</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># vi /etc/profile</span>
-</code></pre></div>
-<p><img alt="image-20210915104219646" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png" /></p>
-<p><img alt="image-20210915104250795" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png" /></p>
-<p>4.进入到tomcat目录启动tomcat</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># bin/startup.sh</span>
-</code></pre></div>
-<p><img alt="image-20210915104407079" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png" /></p>
-<p>5.查看tomcat是否能够成功启动</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># curl http://localhost:8080</span>
-</code></pre></div>
-<p><img alt="image-20210915104623536" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png" /></p>
-<p>6.删除镜像内的安装包</p>
-<p><img alt="image-20210915105459659" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png" /></p>
-<p>7.构建镜像</p>
-<p><img alt="image-20210915105715981" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105715981.png" /></p>
-<p>8.查看构建的镜像</p>
-<p><img alt="image-20210915105736552" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105736552.png" /></p>
-<p>9.启动镜像</p>
-<p><img alt="image-20210915110001905" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110001905.png" /></p>
-<p><img alt="image-20210915110053414" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110053414.png" /></p>
-<p><img alt="image-20210915110150337" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110150337.png" /></p>
-<p>软件路径</p>
-<p><a href="https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u262-b10/openlogic-openjdk-8u262-b10-linux-x64.tar.gz">opeJDK8</a></p>
-<p><a href="https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz">tomcat</a></p>
+<h2 id="2">2.硬件要求<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p><strong>最低的笔记本电脑/PC 台式机系统要求</strong></p>
+<p><strong>先决条件：</strong></p>
+<p>CPU：支持 Intel® VT-x /EPT 虚拟化的 Intel CPU 操作系统：Windows 7、8、10 或 Linux Desktop VMware Workstation 12.5 或更高版本</p>
+<p>VMware Player 12.5 或更高版本</p>
+<table>
+<thead>
+<tr>
+<th><strong>PC/笔记本电脑硬件要求</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中央处理器</td>
+<td>Intel i5/i7（4 个逻辑处理器），在 BIOS 中启用 Intel 虚拟化</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>8Gb</td>
+</tr>
+<tr>
+<td>硬盘空间</td>
+<td>40Gb</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>局域网/无线局域网</td>
+</tr>
+<tr>
+<td><strong>PNETLab 虚拟机要求</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>中央处理器</td>
+<td>4/1（处理器数量/每个处理器的核心数量）启用 Intel VT-x/EPT 虚拟化引擎</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>6Gb或更多</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>40Gb 或更多</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>VMware NAT 或桥接网络适配器</td>
+</tr>
+</tbody>
+</table>
+<p>注意：最小的 PC 台式机/笔记本电脑将能够运行小型实验室。每个实验室的性能和节点数量取决于实验室中部署的节点类型。</p>
+<p>例子：</p>
+<p>IOL 基于图像的节点：每个实验室最多 40-50 个节点 Dynamips 基于图像的节点：每个实验室最多 20-25 个节点 vIOS 基于图像的节点：每个实验室最多 8-10 个节点 CSRv1000 或 XRv 基于图像的节点：每个实验室最多 2-3 个</p>
+<p><strong>推荐的笔记本电脑/PC 台式机系统要求</strong></p>
+<p><strong>先决条件：</strong></p>
+<p>CPU：支持 Intel® VT-x /EPT 虚拟化的 Intel CPU 操作系统：Windows 7、8、10 或 Linux Desktop VMware Workstation 12.5 或更高版本</p>
+<p>VW Ware Player 12.5 或更高版本</p>
+<table>
+<thead>
+<tr>
+<th><strong>PC/笔记本电脑硬件要求</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中央处理器</td>
+<td>Intel i7（8 个逻辑处理器），在BIOS</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>32Gb</td>
+</tr>
+<tr>
+<td>硬盘空间</td>
+<td>200Gb</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>局域网/无线局域网</td>
+</tr>
+<tr>
+<td><strong>PNETLab 虚拟机要求</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>中央处理器</td>
+<td>8/1（处理器数量/每个处理器的核心数量）启用 Intel VT-x/EPT 虚拟化引擎</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>24Gb 或更多</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>200Gb 或更多</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>VMware NAT 或桥接网络适配器</td>
+</tr>
+</tbody>
+</table>
+<p>注意：PC 台式机/笔记本电脑将能够运行中小型实验室。每个实验室的性能和节点数量取决于实验室中部署的节点类型。</p>
+<p>例子：</p>
+<p>IOL 基于图像的节点：每个实验室最多 120 个节点 vIOS 基于图像的节点：每个实验室最多 20-40 个节点 基于 CSR 图像的节点：每个实验室最多 10 个</p>
+<p><strong>虚拟务服器系统要求</strong></p>
+<p><strong>先决条件：</strong></p>
+<p>CPU：英特尔至强 CPU，支持带有扩展页表 (EPT) 的英特尔® VT-x 操作系统：ESXi 6.0 或更高版本</p>
+<table>
+<thead>
+<tr>
+<th><strong>服务器硬件要求</strong></th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中央处理器</td>
+<td>推荐 CPU 2x Intel E5-2650v3（40 个逻辑处理器）或更好地支持带有扩展页表 (EPT) 的 Intel® VT-x最低 CPU 是任何支持 Intel® VT-x 的 Intel Xeon CPU带有扩展页表 (EPT)</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>128Gb</td>
+</tr>
+<tr>
+<td>硬盘空间</td>
+<td>2Tb</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>局域网以太网</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>服务器硬件要求</strong></th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中央处理器</td>
+<td>32/1（处理器数量/每个处理器的内核数量）启用 Intel VT-x/EPT 虚拟化引擎</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>64Gb 及以上</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>800Gb 及以上</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>vSwitch/VMnet</td>
+</tr>
+</tbody>
+</table>
+<p>注意：每个实验室的性能和节点数量取决于实验室中使用的节点类型。</p>
+<p>例子：</p>
+<p>120 IOL 基于镜像的实验室</p>
+<p>每个实验室 20 个 基于CSRv1000 镜像的节点</p>
+<p><strong>专用服务器（裸机）系统要求</strong></p>
+<p><strong>先条件：</strong></p>
+<p>CPU：Intel Xeon CPU 支持 Intel® VT-x with Extended Page Tables (EPT) 操作系统：Ubuntu Server 16.04.4 LTS x64</p>
+<table>
+<thead>
+<tr>
+<th><strong>服务器硬件要求</strong></th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中央处理器</td>
+<td>推荐的 CPU Intel E5-2650v3（40 个逻辑处理器）或更好的支持 Intel® VT-x with Extended Page Tables (EPT) 最低 CPU 是任何支持 Intel® VT-x 和 扩展页E表xtended Page Tables (EPT) 的 Intel Xeon CPU</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>128Gb</td>
+</tr>
+<tr>
+<td>硬盘空间</td>
+<td>2Tb</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>局域网以太网</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1">支持的虚拟化平台和软件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>虚拟化平台</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VMware Workstation 12.5 或更高版本</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>VMware Player 12.5 或更高版本</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.0 或更高版本</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>Ubuntu Server 16.04 LTS 作为裸机平台（物理机安装）</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>谷歌云平台</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">不受支持的硬件和系统<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>硬件或者虚拟化平台</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于 AMD CPU 的 PC 或服务器</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>VirtualBox 虚拟化</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>思杰 XenServer</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>微软 HyperV</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>Ubuntu 17.X 或 18.x 作为平台</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3pnetlab">3.安装PNETLab<a class="headerlink" href="#3pnetlab" title="Permanent link">&para;</a></h2>
+<p><a href="https://pan.baidu.com/s/1tE_ffGSN6-SqfHZ5c34Rew">百度网盘下载链接</a> 提取码：2333 </p>
+<p>1.下载.ova文件，并导入VMWare Workstation。</p>
+<p><img alt="image-20221023142609870" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023142609870.png" /></p>
+<p>2.提前下载好WMware Workstation，将下载的好的PNET_4.2.10.ova文件使用VMWare Workstation文件打开。</p>
+<p>3.弹出以下对话框，设置好虚拟机名称和虚拟机的存储路径，点击导入按钮。</p>
+<p><img alt="image-20221023142947323" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023142947323.png" /></p>
+<p>4.等待进度条完成</p>
+<p><img alt="image-20221023143151279" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023143151279.png" /></p>
+<p>5.虚拟机导入成功后点击编辑虚拟机设置；开启该虚拟机的Intel VT-x/EPT。</p>
+<p><img alt="image-20221023143507073" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023143507073.png" /></p>
+<p><strong>注意</strong>：虚拟机处理器要开启Intel VT-x/EPT。否则安装完成后虚拟机镜像不能正常启动。</p>
+<p><img alt="image-20221022162432047" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221022162432047.png" /></p>
+<p>6.开启虚拟机，登录</p>
+<p><img alt="image-20221023143653257" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023143653257.png" /></p>
+<p>7.查看虚拟机状态是否正常</p>
+<p>**注意：**如果出现下图框选起来的提示信息证明已经开启了虚拟机处理器的Intel VT-x/EMP选项。如果跟下图框选出来字段不匹配，一定要开启Intel VT-x/EMP选项。</p>
+<p><img alt="image-20221023143831452" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023143831452.png" /></p>
+<p>8.使用给定的IP地址输入浏览器，登录PNETLab</p>
+<p><img alt="image-20221023144139769" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023144139769.png" /></p>
+<p>9.在浏览器点击高级选项卡，点击继续前往。</p>
+<p><img alt="image-20221023144223023" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023144223023.png" /></p>
+<p><img alt="image-20221023144415082" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023144415082.png" /></p>
+<p>10.出现登录界面；有两种登录模式。Online Mode（在线模式）Offine Mode（离线模式）</p>
+<p><img alt="image-20221023144538202" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023144538202.png" /></p>
+<p>11.如果选择在线登录，并且是初次登录需要创建用户名和密码，</p>
+<p><img alt="image-20221023144821352" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023144821352.png" /></p>
+<p>12.点击Sign Up，依次输入用户名，邮箱以及两次密码，验证码</p>
+<p><img alt="image-20221023145021066" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023145021066.png" /></p>
+<p>13.注册完成后返回登录界面，依据提示输入相关信息登录即可。</p>
+<p><img alt="image-20221023145143190" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023145143190.png" /></p>
+<p>14.登录成功后可以进入Store页面下载现成的网络拓扑进行练习。</p>
+<p><img alt="image-20221023145717231" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023145717231.png" /></p>
+<p><img alt="image-20221023145901578" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023145901578.png" /></p>
+<p>15.点击下载拓扑会弹出一个对话框，在此对话款只需要填写安装好的PNETLab提供的登录IP地址即可</p>
+<p><img alt="image-20221023150138277" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023150138277.png" /></p>
+<p>16.点击Download选项卡，页面会跳转到登录页面，输入验证码，点击Login重新登录。</p>
+<p><img alt="image-20221023150231076" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023150231076.png" /></p>
+<p>17.出现警告页面，忽略警告。点击仍然发送</p>
+<p><img alt="image-20221023150347705" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023150347705.png" /></p>
+<p>18.在此页面可以完成创建拓扑等操作，至此在线模式登录成功。</p>
+<p><img alt="image-20221023150438373" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023150438373.png" /></p>
+<p>19.离线模式和在线模式功能并无区别，除了无法访问PNETLab自带的拓扑商店，下载其他用户设计好的拓扑。如果想启用离线模式必须先处于在线模式更改系统设置。</p>
+<p><img alt="image-20221023150936703" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023150936703.png" /></p>
+<p>20.开启离线模式</p>
+<p><img alt="image-20221023151026682" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023151026682.png" /></p>
+<p><img alt="image-20221023151104620" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023151104620.png" /></p>
+<p>21.退出登录，页面变更为离线模式登录页面。再此页面用户名默认为admin密码为pnet默认Console选择为HTML Console。输入验证码，点击Login。即可登录离线模式。</p>
+<p><img alt="image-20221023151218664" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023151218664.png" /></p>
+<p><img alt="image-20221023151357678" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023151357678.png" /></p>
 
               
             </article>
@@ -632,6 +1037,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="上一页: HCIE" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              HCIE
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../.." class="md-footer__link md-footer__link--next" aria-label="下一页: Coding" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Coding
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
