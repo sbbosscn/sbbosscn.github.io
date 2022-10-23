@@ -771,42 +771,37 @@
 <p>在docker官方网站下载docker安装包。并执行安装运行即可。</p>
 <p><img alt="image-20210903170242490" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170242490.png" /></p>
 <p>安装成功以后在windows平台上使用终端工具输入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker version
-</code></pre></div>
+<p><code>dockerfile
+docker version</code></p>
 <p>查看是否安装成功。</p>
 <p><img alt="451630660055_.pic" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/451630660055_.pic.jpg" /></p>
 <h3 id="linuxdockercentos">在linux平台上安装Docker（以Centos为例）<a class="headerlink" href="#linuxdockercentos" title="Permanent link">&para;</a></h3>
 <p>安装docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># sudo yum install docker-ce docker-ce-cli containerd.io</span>
-</code></pre></div>
+<p><code>shell
+[root@centos-docker ~]# sudo yum install docker-ce docker-ce-cli containerd.io</code></p>
 <p>启动docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[root@centos-docker ~]#  sudo systemctl start docker
-</code></pre></div>
+<p><code>[root@centos-docker ~]#  sudo systemctl start docker</code></p>
 <p>测试docker是否正常安装</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">title</span><span class="o">=</span><span class="s2">&quot;&lt;custom title&gt;&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># docker run hello-world</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Hello from Docker!
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>This message shows that your installation appears to be working correctly.
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>To generate this message, Docker took the following steps:
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a> <span class="m">1</span>. The Docker client contacted the Docker daemon.
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a> <span class="m">2</span>. The Docker daemon pulled the <span class="s2">&quot;hello-world&quot;</span> image from the Docker Hub.
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="o">(</span>amd64<span class="o">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a> <span class="m">3</span>. The Docker daemon created a new container from that image which runs the
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    executable that produces the output you are currently reading.
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a> <span class="m">4</span>. The Docker daemon streamed that output to the Docker client, which sent it
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    to your terminal.
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>To try something more ambitious, you can run an Ubuntu container with:
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a> $ docker run -it ubuntu bash
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Share images, automate workflows, and more with a free Docker ID:
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a> https://hub.docker.com/
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>For more examples and ideas, visit:
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a> https://docs.docker.com/get-started
-</code></pre></div>
+<p>```shell
+title="<custom title>"
+[root@centos-docker ~]# docker run hello-world</p>
+<p>Hello from Docker!
+This message shows that your installation appears to be working correctly.</p>
+<p>To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.</p>
+<p>To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash</p>
+<p>Share images, automate workflows, and more with a free Docker ID:
+ <a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
+<p>For more examples and ideas, visit:
+ <a href="https://docs.docker.com/get-started">https://docs.docker.com/get-started</a>
+```</p>
 <h3 id="mac-osdocker">在Mac os上安装Docker<a class="headerlink" href="#mac-osdocker" title="Permanent link">&para;</a></h3>
 <p>下载Docker应用</p>
 <p><img alt="image-20210903173201081" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173201081.png" /></p>
@@ -828,15 +823,15 @@
     * [x] In scelerisque nibh non dolor mollis congue sed et metus
     * [ ] Praesent sed risus massa
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/python</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># -*- coding: UTF-8 -*-</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="k">if</span><span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">k</span> <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">j</span> <span class="o">!=</span> <span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
-</code></pre></div>
+<p>```python</p>
+<h1 id="usrbinpython">!/usr/bin/python<a class="headerlink" href="#usrbinpython" title="Permanent link">&para;</a></h1>
+<h1 id="-coding-utf-8-">-<em>- coding: UTF-8 -</em>-<a class="headerlink" href="#-coding-utf-8-" title="Permanent link">&para;</a></h1>
+<p>for i in range(1,5):
+    for j in range(1,5):
+        for k in range(1,5):
+            if( i != k ) and (i != j) and (j != k):
+                print (i,j,k)
+```</p>
 
               
             </article>

@@ -749,89 +749,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3docker-hub" class="md-nav__link">
-    3.镜像来源Docker Hub
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.镜像的命名和标签
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5.拉取镜像
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6docker-image-ls" class="md-nav__link">
-    6.过滤docker image ls的输出
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    7.镜像检索
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    8.镜像和分层
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
-    9.镜像散列值
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10" class="md-nav__link">
-    10.删除镜像
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    11.镜像的导入和导出
-  </a>
-  
-    <nav class="md-nav" aria-label="11.镜像的导入和导出">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    镜像的导出
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    镜像的导入
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -865,21 +782,25 @@
 <p>Linux Docker主机本地镜像仓库通常位于/var/lib/docker/[storage-dirver],在此处的storage-dirver指的是使用的存储驱动的类型。在不同版本的docker中使用的存储驱动类型并不总是一致的。本次安装的Docker 版本为：Docker Version：20.10.8 Storage Driver：overlay。除此之外Storage Diver还有extfs，overlay2等。</p>
 <p>​   例子：</p>
 <p>使用：docker system info可以查看docker的信息,其中包含存储驱动类型。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># docker system info</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-system-info">docker system info<a class="headerlink" href="#docker-system-info" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906215032969" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906215032969.png" />    </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># cd /var/lib/docker/overlay</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># ll</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="cd-varlibdockeroverlay">cd /var/lib/docker/overlay<a class="headerlink" href="#cd-varlibdockeroverlay" title="Permanent link">&para;</a></h1>
+<h1 id="ll">ll<a class="headerlink" href="#ll" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906214450299" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906214450299.png" /></p>
 <p>上图中蓝色字符为镜像的Image ID</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># docker image ls</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-ls">docker image ls<a class="headerlink" href="#docker-image-ls" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906214838822" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906214838822.png" /></p>
 <p>值得说明的一点是，在使用docker image ls命令时。显示出来的Image ID实际上并不是完整的Image ID是实际Image ID的最后几位。</p>
 <p>拉取镜像：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># docker image pull node:latest
-</code></pre></div>
+<p>```</p>
+<h1 id="docker-image-pull-nodelatest">docker image pull node:latest<a class="headerlink" href="#docker-image-pull-nodelatest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906221431664" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906221431664.png" /></p>
 <h2 id="3docker-hub">3.镜像来源Docker Hub<a class="headerlink" href="#3docker-hub" title="Permanent link">&para;</a></h2>
 <p>Docker镜像存储在镜像仓库服务（Image Registry）当中。Docker客户端的镜像仓库服务是可以配置的，默认使用的是Docker Hub。</p>
@@ -889,15 +810,17 @@
 <p>​   只要给出镜像的名字和标签就能够从官方的镜像仓库中定位一个镜像。镜像的名字和标签之间使用的的是“:”进行分割，例如从官方拉取镜像时docker image pull的命令格式如下。</p>
 <p>​   docker image pull [repostiory:latest]</p>
 <p>从mongo仓库中拉取标签为3.2.0-rc1的镜像</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># docker image pull mongo:3.2.0-rc1</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-pull-mongo320-rc1">docker image pull mongo:3.2.0-rc1<a class="headerlink" href="#docker-image-pull-mongo320-rc1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><strong>注意：</strong></p>
 <p>​   如果没有在镜像仓库名称后面指定具体的镜像标签，则Docker会默认拉取标签为latest的镜像。但是latest标签是一个非强制标签，也就是说带有latest标签的镜像并不能够保证该镜像是仓库中最新的镜像。</p>
 <h2 id="6docker-image-ls">6.过滤docker image ls的输出<a class="headerlink" href="#6docker-image-ls" title="Permanent link">&para;</a></h2>
 <p>docker使用 --filter参数来实现对docker image ls输出的过滤。    </p>
 <p>​   下面的实例会返回本地镜像中的悬虚镜像。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># docker image ls --filter dangling=true</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-ls-filter-danglingtrue">docker image ls --filter dangling=true<a class="headerlink" href="#docker-image-ls-filter-danglingtrue" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210906230048181" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906230048181.png" /></p>
 <p>悬虚镜像是那些没有标签的镜像。在列表中展示为**[none]:[none]**。通常出现这种情况，是因为构建了一个新的镜像，然后为该镜像打了一个已经存在的标签。</p>
 <p>docker支持的过滤器：</p>
@@ -909,14 +832,14 @@
 <p>before：需要镜像名称或者ID作为参数，返回之前被创建的所有镜像</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># docker image ls  --filter brefore=7d0d8fa37224</span>
-</code></pre></div>
+<p><code>shell
+  # docker image ls  --filter brefore=7d0d8fa37224</code></p>
 <p><img alt="image-20210907090209390" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090209390.png" /></p>
 <ul>
 <li>since：与before类似，不过返回的是指定镜像之后创建的所有镜像。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># docker image ls  --filter since=7d0d8fa37224</span>
-</code></pre></div>
+<p><code>shell
+  # docker image ls  --filter since=7d0d8fa37224</code></p>
 <p><img alt="image-20210907090247745" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090247745.png" /></p>
 <ul>
 <li>
@@ -926,8 +849,8 @@
 <p>使用reference完成过滤并且仅显示标签为latest的镜像</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># docker image ls --filter=reference=&quot;*:latest&quot;</span>
-</code></pre></div>
+<p><code>shell
+  # docker image ls --filter=reference="*:latest"</code></p>
 <p><img alt="image-20210907090735746" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907090735746.png" /></p>
 <ul>
 <li>
@@ -937,30 +860,35 @@
 <p>返回主机上镜像大小</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># docker image ls  --format &quot;{{.Size}}&quot;</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-ls-format-size">docker image ls  --format "{{.Size}}"<a class="headerlink" href="#docker-image-ls-format-size" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907091612889" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907091612889.png" /></p>
 <ul>
 <li>使用下面的命令可以返回全部镜像但是只显示仓库，标签和大小信息。</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">#docker image ls --format &quot;{{.Repository}}:    {{.Tag}}:    {{.Size}}&quot;</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-ls-format-repository-tag-size">docker image ls --format "{{.Repository}}:    {{.Tag}}:    {{.Size}}"<a class="headerlink" href="#docker-image-ls-format-repository-tag-size" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907092326218" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907092326218.png" /></p>
 <h2 id="7">7.镜像检索<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p>docker search命令允许通过CLI的方式搜索Docker Hub。通过NAME进行匹配，并基于返回的内容进行过滤。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># docker search ubuntu</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-search-ubuntu">docker search ubuntu<a class="headerlink" href="#docker-search-ubuntu" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907093719372" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907093719372.png" /></p>
 <p>实际上Docker search默认会返回25条结果；但是我在上面的截图中省略了一部分。</p>
 <p>通过Docker内置的help工具可以知道，docker search 可以通过Options参数来过过滤输出的结果。</p>
 <p><img alt="image-20210907093643826" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907093643826.png" /></p>
 <p>值得注意的是，在使用Docker search ubuntu这条命令时默认输出了25条ubuntu仓库的信息。但是这些仓库并不都是官方仓库。如果你想输出的结果只显示官方仓库那么你就可以使用filter参数对输出的结果尽心过滤。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># docker search ubuntu --filter &quot;is-official=true&quot;</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-search-ubuntu-filter-is-officialtrue">docker search ubuntu --filter "is-official=true"<a class="headerlink" href="#docker-search-ubuntu-filter-is-officialtrue" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907094446456" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094446456.png" /></p>
 <p>前面说到Docker search默认只会输出25条结果，你可以通过使用limit参数来增加返回的条目数，但是最大不能超过100条。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># docker search ubuntu --limit 100</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-search-ubuntu-limit-100">docker search ubuntu --limit 100<a class="headerlink" href="#docker-search-ubuntu-limit-100" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907094800059" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094800059.png" /></p>
 <p><img alt="image-20210907094828544" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907094828544.png" /></p>
 <h2 id="8">8.镜像和分层<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
@@ -968,12 +896,14 @@
 <p><img alt="image-20210906182203363" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906182203363.png" /></p>
 <p>​   docker复制堆叠这些镜像层，并且把他们表示为单一统一的对象。</p>
 <p>​   尝试拉取一个镜像。拉取ruby这个镜像，以Already exists结尾的每一行表示本地已经存在的镜像层。以pull complete结尾的是在网上拉取的层。ruby这个镜像总共包含8个层。每个层都使用层ID的形式进行区别。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># docker image pull ruby:latest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-pull-rubylatest">docker image pull ruby:latest<a class="headerlink" href="#docker-image-pull-rubylatest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907095553871" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907095553871.png" /></p>
 <p>查看镜像分层的另一种方式</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># docker image inspect ruby:latest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-inspect-rubylatest">docker image inspect ruby:latest<a class="headerlink" href="#docker-image-inspect-rubylatest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>截取之后的输出结果同样包含8个层，并且层ID是完整的。没层都是使用sha256的三散列值来标识镜像层。</p>
 <p><img alt="image-20210907100157937" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907100157937.png" /></p>
 <p>​   所有的Docker镜像都起始于一个**基础镜像层**，当进行修改或者添加新的内容时，就会在当前镜像层上创建新的镜像层。</p>
@@ -1001,8 +931,9 @@
 <p>​   镜像层才是实际存储数据的地方，每个镜像层之间是完全相互独立的，所以不存在镜像集合的概念。</p>
 <p>​   镜像的唯一标识是一个加密的ID，该ID是配置对象本身的散列值，每个镜像层也有一个加密的ID去分，其值是镜像层本身内容的散列值。之前学过一个命令 docker image  inspest [image:latest]。通过这条命令可以查看ImageID和组成Image的各个分层的ID。</p>
 <p>以ruby:latest镜像为例</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># docker image inspect ruby:latest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-inspect-rubylatest_1">docker image inspect ruby:latest<a class="headerlink" href="#docker-image-inspect-rubylatest_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>Image ID：</p>
 <p><img alt="image-20210907133758053" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907133758053.png" /></p>
 <p>分层ID：</p>
@@ -1013,36 +944,44 @@
 <p>​   删除操作会在当前主机上删除该镜像的以及相关的镜像层。执行完docker image rm [ImageID]之后不能够时候docker image ls看到被删除的镜像。并且被删除的镜像的所包含的镜像层数据的目录也会被删除，但是如果被删除的镜像当中包含被共享的镜像层。之后当共享该镜像层所有的镜像被删除的才会被删除该共享层。</p>
 <p>​   如果被删除的镜像上存在运行状态的容器该镜像也无法被删除会报错。如果要删除该镜像需要在删除镜像之前停止所有使用该镜像的容器。</p>
 <p>显示所有镜像的ID</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># docker image ls -q</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-ls-q">docker image ls -q<a class="headerlink" href="#docker-image-ls-q" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907135226157" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907135226157.png" /></p>
 <p>批量删除镜像：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># docker image rm $(docker image ls -q) -f</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-image-rm-docker-image-ls-q-f">docker image rm $(docker image ls -q) -f<a class="headerlink" href="#docker-image-rm-docker-image-ls-q-f" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210907140037614" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210907140037614.png" /></p>
 <p>批量停止容器</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># docker container stop $(docker container ls -q)</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-stop-docker-container-ls-q">docker container stop $(docker container ls -q)<a class="headerlink" href="#docker-container-stop-docker-container-ls-q" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>在批量删除镜像之前可以采用批量停止容器之后再做批量删除操作。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># docker container stop $(docker container ls -q)</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1"># docker image rm $(docker image ls -q) -f</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-container-stop-docker-container-ls-q_1">docker container stop $(docker container ls -q)<a class="headerlink" href="#docker-container-stop-docker-container-ls-q_1" title="Permanent link">&para;</a></h1>
+<h1 id="docker-image-rm-docker-image-ls-q-f_1">docker image rm $(docker image ls -q) -f<a class="headerlink" href="#docker-image-rm-docker-image-ls-q-f_1" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <h2 id="11">11.镜像的导入和导出<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <h3 id="_1">镜像的导出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p><img alt="image-20210910214837239" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910214837239.png" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># docker save -o /test/myalpine.image alpine:latest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-save-o-testmyalpineimage-alpinelatest">docker save -o /test/myalpine.image alpine:latest<a class="headerlink" href="#docker-save-o-testmyalpineimage-alpinelatest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>或</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># docker save &gt; /test/myalpine.image alpine:latest</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-save-testmyalpineimage-alpinelatest">docker save &gt; /test/myalpine.image alpine:latest<a class="headerlink" href="#docker-save-testmyalpineimage-alpinelatest" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p><img alt="image-20210910220241920" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910220241920.png" /></p>
 <h3 id="_2">镜像的导入<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="image-20210910221429556" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210910221429556.png" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># docker load -i /test/myalpine.image</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-load-i-testmyalpineimage">docker load -i /test/myalpine.image<a class="headerlink" href="#docker-load-i-testmyalpineimage" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>或</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># docker load &lt; /test/myalpine.image</span>
-</code></pre></div>
+<p>```shell</p>
+<h1 id="docker-load-testmyalpineimage">docker load &lt; /test/myalpine.image<a class="headerlink" href="#docker-load-testmyalpineimage" title="Permanent link">&para;</a></h1>
+<p>```</p>
 
               
             </article>
