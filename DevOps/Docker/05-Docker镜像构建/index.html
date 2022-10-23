@@ -619,25 +619,22 @@
 <p>2.拷贝资源</p>
 <p><img alt="image-20210915102646421" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png" /></p>
 <p>3.解压资源；调整配置文件</p>
-<p>```shell</p>
-<h1 id="cd-root">cd /root/<a class="headerlink" href="#cd-root" title="Permanent link">&para;</a></h1>
-<h1 id="mkdir-p-usrlocaljava">mkdir -p /usr/local/java<a class="headerlink" href="#mkdir-p-usrlocaljava" title="Permanent link">&para;</a></h1>
-<h1 id="mkdir-p-usrlocaltomcat">mkdir -p /usr/local/tomcat<a class="headerlink" href="#mkdir-p-usrlocaltomcat" title="Permanent link">&para;</a></h1>
-<h1 id="tar-zxvf-apache-tomcat-9053targz-c-usrlocaltomcat">tar -zxvf apache-tomcat-9.0.53.tar.gz -C /usr/local/tomcat<a class="headerlink" href="#tar-zxvf-apache-tomcat-9053targz-c-usrlocaltomcat" title="Permanent link">&para;</a></h1>
-<h1 id="tar-zxvf-openlogic-openjdk-8u262-b10-linux-x64targz-c-usrlocaljava">tar -zxvf openlogic-openjdk-8u262-b10-linux-x64.tar.gz -C /usr/local/java<a class="headerlink" href="#tar-zxvf-openlogic-openjdk-8u262-b10-linux-x64targz-c-usrlocaljava" title="Permanent link">&para;</a></h1>
-<h1 id="vi-etcprofile">vi /etc/profile<a class="headerlink" href="#vi-etcprofile" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># cd /root/</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># mkdir -p /usr/local/java</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># mkdir -p /usr/local/tomcat</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># tar -zxvf apache-tomcat-9.0.53.tar.gz -C /usr/local/tomcat</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># tar -zxvf openlogic-openjdk-8u262-b10-linux-x64.tar.gz -C /usr/local/java</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># vi /etc/profile</span>
+</code></pre></div>
 <p><img alt="image-20210915104219646" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png" /></p>
 <p><img alt="image-20210915104250795" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png" /></p>
 <p>4.进入到tomcat目录启动tomcat</p>
-<p>```shell</p>
-<h1 id="binstartupsh">bin/startup.sh<a class="headerlink" href="#binstartupsh" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># bin/startup.sh</span>
+</code></pre></div>
 <p><img alt="image-20210915104407079" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png" /></p>
 <p>5.查看tomcat是否能够成功启动</p>
-<p>```shell</p>
-<h1 id="curl-httplocalhost8080">curl <a href="http://localhost:8080">http://localhost:8080</a><a class="headerlink" href="#curl-httplocalhost8080" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># curl http://localhost:8080</span>
+</code></pre></div>
 <p><img alt="image-20210915104623536" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png" /></p>
 <p>6.删除镜像内的安装包</p>
 <p><img alt="image-20210915105459659" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png" /></p>
