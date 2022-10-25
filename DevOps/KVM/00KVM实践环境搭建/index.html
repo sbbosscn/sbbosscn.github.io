@@ -12,14 +12,14 @@
         <meta name="author" content="Han Lu">
       
       
-        <link rel="canonical" href="https://www.sbboss.cn/DevOps/Docker/00-Docker%E5%AE%89%E8%A3%85/">
+        <link rel="canonical" href="https://www.sbboss.cn/DevOps/KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Docker - sbboss</title>
+        <title>00-KVM实践环境搭建 - sbboss</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#kvm" class="md-skip">
           跳转至
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              00-KVM实践环境搭建
             
           </span>
         </div>
@@ -254,6 +254,8 @@
         
   
   
+    
+  
 
 
   
@@ -265,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/" class="md-tabs__link">
+      <a href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/" class="md-tabs__link md-tabs__link--active">
         DevOps
       </a>
     </li>
@@ -410,12 +412,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -495,14 +499,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -527,11 +533,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          00-KVM实践环境搭建
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         00-KVM实践环境搭建
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1vmware-workstation" class="md-nav__link">
+    1.使用VMware Workstation创建虚拟机
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -622,43 +669,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker_1" class="md-nav__link">
-    docker是什么？
+  <a href="#1vmware-workstation" class="md-nav__link">
+    1.使用VMware Workstation创建虚拟机
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker_2" class="md-nav__link">
-    Docker的安装
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker的安装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows11" class="md-nav__link">
-    windows11平台上的安装。
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linuxdockercentos" class="md-nav__link">
-    在linux平台上安装Docker（以Centos为例）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mac-osdocker" class="md-nav__link">
-    在Mac os上安装Docker
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -674,117 +687,56 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/00-Docker安装.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/KVM/00KVM实践环境搭建.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<h2 id="docker_1">docker是什么？<a class="headerlink" href="#docker_1" title="Permanent link">&para;</a></h2>
-<iframe  width="100%" height="100%" src="//player.bilibili.com/player.html?aid=547083207&bvid=BV1qq4y1p7fE&cid=382080352&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p><img alt="image-20210903163929936" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903163929936.png" /></p>
-<iframe src="//player.bilibili.com/player.html?aid=547083207&bvid=BV1qq4y1p7fE&cid=382080352&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="allowfullscreen"> </iframe>
-
-<p>Docker是一种能够运行在windows、linux和Mac os上的软件，用于管理创建和编排容器。Docker是在Github上开发的Moby开源项目的一部分。Docker公司，位于旧金山，是整个Moby开源项目的维护者。Docker公司还提供包含支持服务的商业版本的Docker。</p>
-<p><img alt="image-20210903164521106" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164521106.png" /></p>
-<h2 id="docker_2">Docker的安装<a class="headerlink" href="#docker_2" title="Permanent link">&para;</a></h2>
-<iframe src="//player.bilibili.com/player.html?aid=334335085&bvid=BV1Sw411978q&cid=373994748&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
-
-<h3 id="windows11">windows11平台上的安装。<a class="headerlink" href="#windows11" title="Permanent link">&para;</a></h3>
-<p><a href="https://www.docker.com/">docker网站</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=375588815&bvid=BV1so4y1m7U5&cid=339262048&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<p><img alt="image-20210903164908723" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164908723.png" /></p>
-<p><img alt="image-20210903164940396" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903164940396.png" /></p>
-<p>选择适合的平台下载相应的安装文件。</p>
-<p><img alt="image-20210903165002746" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165002746.png" /></p>
-<p><img alt="image-20210903165022361" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165022361.png" /></p>
-<p>windows版的docker是一个社区版本（Community Edition，CE）的应用，并不是为生产环境设计的。</p>
-<p>本文的安装环境为windows11专业版。这也是笔者第一次尝试安装在windows11上。并未做深入的测试，理论上win10上的安装类似。</p>
-<p><img alt="image-20210903165527415" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903165527415.png" /></p>
-<p>对于在windows平台上安装Docker必须满足一下几点。</p>
+<h1 id="kvm">KVM实践环境搭建<a class="headerlink" href="#kvm" title="Permanent link">&para;</a></h1>
+<h2 id="1vmware-workstation">1.使用VMware Workstation创建虚拟机<a class="headerlink" href="#1vmware-workstation" title="Permanent link">&para;</a></h2>
+<p>1.选择创建新的虚拟机选项卡</p>
+<p><img alt="image-20221023224017639" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224017639.png" /></p>
+<p>2.根据创建虚拟机向导创建所需规格的虚拟机</p>
+<p><img alt="image-20221023224146348" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224146348.png" /></p>
+<p><img alt="image-20221023224201451" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224201451.png" /></p>
+<p><img alt="image-20221023224226846" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224226846.png" /></p>
+<p>3.选择操作系统版本为Centos 8 64位</p>
+<p><img alt="image-20221023224329656" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224329656.png" /></p>
+<p>4.设置虚拟机名称和虚拟机所在位置</p>
+<p><img alt="image-20221023224422293" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224422293.png" /></p>
+<p>5.自定义虚拟机CPU，内存和硬盘的规格</p>
+<p><img alt="image-20221023224538420" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224538420.png" /></p>
+<p><img alt="image-20221023224617452" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224617452.png" /></p>
+<p><img alt="image-20221023224715553" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224715553.png" /></p>
+<p><img alt="image-20221023224726669" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224726669.png" /></p>
+<p><img alt="image-20221023224741275" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224741275.png" /></p>
+<p><img alt="image-20221023224808281" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224808281.png" /></p>
+<p><img alt="image-20221023224823236" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023224823236.png" /></p>
+<p>6.自定义硬件设置。添加、修改或删除所需硬件。</p>
 <ul>
-<li>windows必须是64bit</li>
-<li>windows必须支持hyper-v和容器特性</li>
-<li>电脑硬件平台需要开启虚拟化VT-X</li>
+<li>打开处理器的硬件辅助虚拟化开关</li>
 </ul>
-<p>需要确认已在在window平台上开启hyper-v和容器特性。</p>
-<p><img alt="image-20210903170029206" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170029206.png" /></p>
-<p><img alt="image-20210903170038754" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170038754.png" /></p>
-<p><img alt="image-20210903170046229" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170046229.png" /></p>
-<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170053254.png" alt="image-20210903170053254" style="zoom:33%;" /></p>
-<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170103848.png" alt="image-20210903170103848" style="zoom:33%;" /></p>
-<p>在docker官方网站下载docker安装包。并执行安装运行即可。</p>
-<p><img alt="image-20210903170242490" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903170242490.png" /></p>
-<p>安装成功以后在windows平台上使用终端工具输入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker version
-</code></pre></div>
-<p>查看是否安装成功。</p>
-<p><img alt="451630660055_.pic" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/451630660055_.pic.jpg" /></p>
-<h3 id="linuxdockercentos">在linux平台上安装Docker（以Centos为例）<a class="headerlink" href="#linuxdockercentos" title="Permanent link">&para;</a></h3>
-<p>安装docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># sudo yum install docker-ce docker-ce-cli containerd.io</span>
-</code></pre></div>
-<p>启动docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[root@centos-docker ~]#  sudo systemctl start docker
-</code></pre></div>
-<p>测试docker是否正常安装</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">title</span><span class="o">=</span><span class="s2">&quot;&lt;custom title&gt;&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">[</span>root@centos-docker ~<span class="o">]</span><span class="c1"># docker run hello-world</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Hello from Docker!
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>This message shows that your installation appears to be working correctly.
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>To generate this message, Docker took the following steps:
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a> <span class="m">1</span>. The Docker client contacted the Docker daemon.
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a> <span class="m">2</span>. The Docker daemon pulled the <span class="s2">&quot;hello-world&quot;</span> image from the Docker Hub.
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="o">(</span>amd64<span class="o">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a> <span class="m">3</span>. The Docker daemon created a new container from that image which runs the
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    executable that produces the output you are currently reading.
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a> <span class="m">4</span>. The Docker daemon streamed that output to the Docker client, which sent it
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    to your terminal.
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>To try something more ambitious, you can run an Ubuntu container with:
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a> $ docker run -it ubuntu bash
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Share images, automate workflows, and more with a free Docker ID:
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a> https://hub.docker.com/
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>For more examples and ideas, visit:
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a> https://docs.docker.com/get-started
-</code></pre></div>
-<h3 id="mac-osdocker">在Mac os上安装Docker<a class="headerlink" href="#mac-osdocker" title="Permanent link">&para;</a></h3>
-<p>下载Docker应用</p>
-<p><img alt="image-20210903173201081" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173201081.png" /></p>
-<p><img alt="image-20210903173605433" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173605433.png" /></p>
-<p><img src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173624269.png" alt="image-20210903173624269" style="zoom:33%;" /></p>
-<p><img alt="image-20210903173938964" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903173938964.png" /></p>
-<p><img alt="image-20210903174239102" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210903174239102.png" /></p>
-<p><pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-- [ ]
-- [x]
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
-    * [x] In scelerisque nibh non dolor mollis congue sed et metus
-    * [ ] Praesent sed risus massa
-- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/python</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># -*- coding: UTF-8 -*-</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="k">if</span><span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">k</span> <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">j</span> <span class="o">!=</span> <span class="n">k</span><span class="p">):</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
-</code></pre></div>
+<p><img alt="image-20221023225134619" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023225134619.png" /></p>
+<ul>
+<li>添加操作系统镜像（这里选择的是CentOS-8.5.2111-x86_64-dvd1.iso）</li>
+</ul>
+<p><img alt="image-20221023225251039" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023225251039.png" /></p>
+<p>7.开启虚拟机安装操作系统</p>
+<p><img alt="image-20221023225515609" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023225515609.png" /></p>
+<p>8.选择语言</p>
+<p><img alt="image-20221023225645131" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023225645131.png" /></p>
+<p>9.设置时区为上海</p>
+<p><img alt="image-20221023225733284" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023225733284.png" /></p>
+<p>10.在预安装软件中选择安装虚拟化相软件</p>
+<p><img alt="image-20221023230059310" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023230059310.png" /></p>
+<p>11.设置root用户密码</p>
+<p><img alt="image-20221023230143273" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023230143273.png" /></p>
+<p>12.开启网络连接</p>
+<p><img alt="image-20221023230235079" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023230235079.png" /></p>
+<p>13.开始安装</p>
+<p><img alt="image-20221023230301352" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023230301352.png" /></p>
+<p><img alt="image-20221023230319345" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221023230319345.png" /></p>
 
               
             </article>
@@ -800,6 +752,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 00-pnetlab从安装到登录" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              00-pnetlab从安装到登录
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../.." class="md-footer__link md-footer__link--next" aria-label="下一页: Coding" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Coding
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
