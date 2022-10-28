@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="学习 沉淀 成长 分享" name="description"/>
 <meta content="Han Lu" name="author"/>
-<link href="https://www.sbboss.cn/DevOps/Docker/05-Docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA/" rel="canonical"/>
+<link href="https://www.sbboss.cn/DevOps/Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/" rel="canonical"/>
 <link href="../../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.1, mkdocs-material-8.3.9" name="generator"/>
-<title>Docker镜像构建 - sbboss</title>
+<title>01-PNETLab加载镜像包 - sbboss</title>
 <link href="../../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -32,7 +32,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker">
+<a class="md-skip" href="#01-pnetlab">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Docker镜像构建
+              01-PNETLab加载镜像包
             
           </span>
 </div>
@@ -143,7 +143,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-tabs__link" href="../00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         DevOps
       </a>
 </li>
@@ -233,7 +233,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-nav__link" href="../00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         00-pnetlab从安装到登录
       </a>
 </li>
@@ -293,50 +293,16 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/05-Docker镜像构建.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Network/01-PNETLab加载镜像包.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="docker">Docker镜像构建<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
-<p>​   我们可以通过公关仓库拉取镜像使用，但是，有些时候公共仓库拉取的镜像并不符合我们的需求，尽管已经从繁琐的部署工作中解放出来，但是实际开发时，我们希望镜像包含整个项目的完整环境，在其他机器上拉取打包完整的镜像，直接运行即可。</p>
-<ul>
-<li>docker commit:从容器创建一个新的镜像</li>
-<li>docker build:配合Dockerfile文件创建镜像</li>
-</ul>
-<p>1.创建容器</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102430231.png"><img alt="image-20210915102430231" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102430231.png"/></a></p>
-<p>2.拷贝资源</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png"><img alt="image-20210915102646421" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png"/></a></p>
-<p>3.解压资源；调整配置文件</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># cd /root/</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># mkdir -p /usr/local/java</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># mkdir -p /usr/local/tomcat</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># tar -zxvf apache-tomcat-9.0.53.tar.gz -C /usr/local/tomcat</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># tar -zxvf openlogic-openjdk-8u262-b10-linux-x64.tar.gz -C /usr/local/java</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># vi /etc/profile</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png"><img alt="image-20210915104219646" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png"><img alt="image-20210915104250795" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png"/></a></p>
-<p>4.进入到tomcat目录启动tomcat</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># bin/startup.sh</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png"><img alt="image-20210915104407079" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png"/></a></p>
-<p>5.查看tomcat是否能够成功启动</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># curl http://localhost:8080</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png"><img alt="image-20210915104623536" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png"/></a></p>
-<p>6.删除镜像内的安装包</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png"><img alt="image-20210915105459659" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png"/></a></p>
-<p>7.构建镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105715981.png"><img alt="image-20210915105715981" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105715981.png"/></a></p>
-<p>8.查看构建的镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105736552.png"><img alt="image-20210915105736552" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105736552.png"/></a></p>
-<p>9.启动镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110001905.png"><img alt="image-20210915110001905" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110001905.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110053414.png"><img alt="image-20210915110053414" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110053414.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110150337.png"><img alt="image-20210915110150337" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110150337.png"/></a></p>
-<p>软件路径</p>
-<p><a href="https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u262-b10/openlogic-openjdk-8u262-b10-linux-x64.tar.gz">opeJDK8</a></p>
-<p><a href="https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz">tomcat</a></p>
+<h1 id="01-pnetlab">01-PNETLab加载镜像包<a class="headerlink" href="#01-pnetlab" title="Permanent link">¶</a></h1>
+<p>1.使用shell工具连接到PNETLab所在的虚拟机，shell工具可以选择putty，SecureCRT，Xshell，或者是最近比较流行的MobaXterm等。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027141954305.png"><img alt="image-20221027141954305" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027141954305.png"/></a></p>
+<p>2.登录成功后进到系统界面，显示的一些系统信息</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027142320559.png"><img alt="image-20221027142320559" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027142320559.png"/></a></p>
+<p>3.PNETLab支持镜像的网络存放位置为:<a href="https://unetlab.cloud">https://unetlab.cloud</a> 我们可以进入该链接下载镜像。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027142740691.png"><img alt="image-20221027142740691" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221027142740691.png"/></a></p>
 </article>
 </div>
 </div>
