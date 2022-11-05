@@ -7,32 +7,32 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="学习 沉淀 成长 分享" name="description"/>
 <meta content="Han Lu" name="author"/>
-<link href="https://www.sbboss.cn/DevOps/Docker/05-Docker%E9%95%9C%E5%83%8F%E6%9E%84%E5%BB%BA/" rel="canonical"/>
-<link href="../../../assets/favicon.png" rel="icon"/>
+<link href="https://www.sbboss.cn/Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/" rel="canonical"/>
+<link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.1, mkdocs-material-8.3.9" name="generator"/>
-<title>Docker镜像构建 - sbboss</title>
-<link href="../../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<title>1.半吊子工程师健身指南 - sbboss</title>
+<link href="../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
-            </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -40,7 +40,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="sbboss" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<a aria-label="sbboss" class="md-header__button md-logo" data-md-component="logo" href="../.." title="sbboss">
 <svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
 <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Docker镜像构建
+              1.半吊子工程师健身指南
             
           </span>
 </div>
@@ -128,37 +128,37 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Cloudcomputing
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       HCIE
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-tabs__link" href="../../DevOps/Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         DevOps
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Coding
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         Radio
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Gym
     </a>
 </li>
@@ -172,7 +172,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="sbboss" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<a aria-label="sbboss" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="sbboss">
 <svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
 <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
@@ -194,17 +194,17 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Cloudcomputing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         HCIE
       </a>
 </li>
@@ -233,12 +233,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-nav__link" href="../../DevOps/Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         00-pnetlab从安装到登录
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/">
+<a class="md-nav__link" href="../../DevOps/Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/">
         01-PNETLab加载镜像包
       </a>
 </li>
@@ -258,7 +258,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+<a class="md-nav__link" href="../../DevOps/KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
         00-KVM实践环境搭建
       </a>
 </li>
@@ -269,12 +269,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Coding
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6">
           Radio
           <span class="md-nav__icon md-icon"></span>
@@ -285,8 +285,9 @@
           Radio
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         1.半吊子工程师健身指南
       </a>
 </li>
@@ -294,7 +295,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Gym
       </a>
 </li>
@@ -313,50 +314,23 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/05-Docker镜像构建.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/Radio/新的一期电台.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="docker">Docker镜像构建<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
-<p>​   我们可以通过公关仓库拉取镜像使用，但是，有些时候公共仓库拉取的镜像并不符合我们的需求，尽管已经从繁琐的部署工作中解放出来，但是实际开发时，我们希望镜像包含整个项目的完整环境，在其他机器上拉取打包完整的镜像，直接运行即可。</p>
-<ul>
-<li>docker commit:从容器创建一个新的镜像</li>
-<li>docker build:配合Dockerfile文件创建镜像</li>
-</ul>
-<p>1.创建容器</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102430231.png"><img alt="image-20210915102430231" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102430231.png"/></a></p>
-<p>2.拷贝资源</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png"><img alt="image-20210915102646421" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915102646421.png"/></a></p>
-<p>3.解压资源；调整配置文件</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># cd /root/</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># mkdir -p /usr/local/java</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># mkdir -p /usr/local/tomcat</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># tar -zxvf apache-tomcat-9.0.53.tar.gz -C /usr/local/tomcat</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># tar -zxvf openlogic-openjdk-8u262-b10-linux-x64.tar.gz -C /usr/local/java</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># vi /etc/profile</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png"><img alt="image-20210915104219646" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104219646.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png"><img alt="image-20210915104250795" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104250795.png"/></a></p>
-<p>4.进入到tomcat目录启动tomcat</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># bin/startup.sh</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png"><img alt="image-20210915104407079" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104407079.png"/></a></p>
-<p>5.查看tomcat是否能够成功启动</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># curl http://localhost:8080</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png"><img alt="image-20210915104623536" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915104623536.png"/></a></p>
-<p>6.删除镜像内的安装包</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png"><img alt="image-20210915105459659" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105459659.png"/></a></p>
-<p>7.构建镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105715981.png"><img alt="image-20210915105715981" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105715981.png"/></a></p>
-<p>8.查看构建的镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105736552.png"><img alt="image-20210915105736552" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915105736552.png"/></a></p>
-<p>9.启动镜像</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110001905.png"><img alt="image-20210915110001905" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110001905.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110053414.png"><img alt="image-20210915110053414" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110053414.png"/></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110150337.png"><img alt="image-20210915110150337" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210915110150337.png"/></a></p>
-<p>软件路径</p>
-<p><a href="https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u262-b10/openlogic-openjdk-8u262-b10-linux-x64.tar.gz">opeJDK8</a></p>
-<p><a href="https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz">tomcat</a></p>
+<h1 id="_1">半吊子工程师健身指南<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p><title>test</title>
+<audio class="" controls="controls">
+<source src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/voice/%E5%8D%8A%E5%90%8A%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%81%A5%E8%BA%AB%E6%8C%87%E5%8D%972022-11-06%2002-34-43.mp3" type="audio/mpeg"/>
+Your browser does not support the audio element.
+</audio></p>
+<p>亲爱的听众朋友你们好，我已经很久没有更新我的电台了。今天之所以更新这一期电台是因为现在实在是睡不着。睡不着的原因也非常的简单，因为今天我喝了太多的功能饮料，导致我直到现在都比较的亢奋，所以我感觉功能饮料这个东西尽量还是少喝。</p>
+<p>​   作为一个廉价且不优质的打工人，一般来说留给自己的能够自由支配的时间相对来说还是比较少的，可能除去上班时间，加班时间，还有必要的休息时间基本上就所剩无几了。在之前我的个人时间比较充裕的时候，做了这个公众号，捣鼓了几篇电台，这让我感到充实和开心，也曾经成为我一个排解烦闷的出口吧。</p>
+<p>​   去年差不多整个一年，我的状态非常的不好。作为一个二十多的小伙汁状态奇差，导致我开始掉头发，然后也不怎么控制饮食，说实在的当时也没什么办法控制饮食，每天吃的让我现在回想起来也不会开心。所以我的体重增加了很多差不多重了十几公斤吧，整个人都有点像是吹胖了的气球。肚子大的真的像是怀了个大胖小子。现在回想起来之前自己那个样子就给我恶心的不行。之后换了工作，但是状态还是没有转变过来，上班时候穿的衬衫一坐下来就把衣服扣子崩开了。那个时候我就意识到自己不能再这么下去了，于是我就打算健身。</p>
+<p>我正式健身的时间应该算是到了年中了也就是在6月份中旬，我记得。虽然我的器材早就买好了，应该是在5月份那块，我买的器材就到了。但是因为家里的一些事情，导致我在六月中旬左右才开始正式健身，一直到现在为止。保持在一周四练这个样子。一开始我是打算练的狠一点的，但是后来我发现根本不行，因为身体吃不消，因为什么呢，一是因为要工作的原因，很多时候到家可能都晚上九点半左右了，然后练上两个小时左右可能都11点快到12点了，洗洗睡觉的时候大部分时间都在12点之后了。第二天再去上班这就会让人感觉非常的累。这里我要说一下的是，在刚开始健身的时候，基本上我单次训练花费的时间确实要多一些，这主要是因为当时我体力非常的差，因为长胖之后耐力包括力量都掉了很多，然后导致我组间休息的时间非常长。所以整个训练的时常就上来了。第二个是当我尝试基本上每天都锻炼以后我发现我的身体是很难恢复过来的，因为我选择的是以力量训练为主的训练模式，而不是有氧为主的训练模式。这就导致每次训练完肌肉都会有一个恢复期，如果不让肌肉休息的话可能训练效果就非常的不理想。最后我i选择的是每周四练的训练模式，周一周二练，周四周六练。其他时间休息。这样能够在工作和健身之间有一个比较好的平衡。</p>
+<p>​   这样的训练持续到9月初，这个时候我已经减掉了不少的肥肉，最起码肚子是没有了。但是如果不处意外的话肯定就出意外了。刚进9月就听到有些许的风声说是这边有疫情，可能还是比较严重。起初我并不在意，直到有一天我上班的时候发现，我操，那些社区团购平台上没法买菜了。这个时候其实就比较紧张了我，毕竟我也是经历过武汉疫情的人。于是我就开始在超市开始屯菜。春江水暖鸭先知，疫情为封菜先涨。这个时候菜价就涨的比较厉害了，作为一个健身人士我发现香蕉已经买不到了，还有好些蔬菜也已经买不到了。猪肉的价格几乎翻了一番。于是我跟疫情中的大多数一样开始了一波抢购，疫情持续了差不多整个9月，我大概从提前从超市买了差不多1000多的物资。加上中间断断续续的采购才勉强够吃。</p>
+<p>​   说实在的疫情期间被封在家里，实际上是我到目前为止健身最痛苦的一段时间。因为要做排队做核酸，当然了我并不排斥做核酸，虽然我排斥也并没有什么卵用。最让人崩溃的是，每天早上弄个喇叭在小区里喊，我日，我都感觉要把我的魂叫出来了。我在这边租的房子，这房子的隔音跟你妈纸糊的一样，喊得我精神衰弱了都。还有就是我非常不理解的一件事情就是，搞了个小区核酸群，每天在群里发做核酸的时间。比如说早上六点半做核酸，总有人他妈的不到六点就去排队，就在那站着。实际上我有一次偶然听到说是尼玛六点半实际上做核酸的大白是7点开始。我就非常不理解为啥要提搞个提前量。这种提前去排队的就搞得大家非常的卷，向我这种按时下来的往往就排到的队伍的最后面。说实在的我很崩溃，不理解他们卷个几把。后来我就再也不准点去了，都是等到临近尾声的时候，从阳台看看没人了再下去，就这样体验非常好。核酸做的非常快从下楼到做完上楼也就5到6分钟。你说你做个核酸卷个几把啊，操。难道享受被棉签捅一下还会有快感么？</p>
+<p>​   在小区被封控期间，我上午被大喇叭叫的睡不着，于是下午就补一会觉。睡醒了起来做点东西吃。恢复到晚上在去锻炼，锻炼完之后发现时间又是晚上12点以后了，然后早上非常早再一次被大喇叭喊起来。如此往复。睡眠不好练的也不好，心情啥的更别说了。</p>
+<p>​   锻炼也有一段时间了，最后说一下一点点成绩，因为我主要是练卧推和深蹲。卧推的话从40公斤到现在100公斤能冲一下，85已经能稳定做组了。深蹲的话100公斤差不多能蹲个12个左右最多。极限不知道，以为这边没有健身房。我自己买的片就只到100公斤。现在其实还是挺忙的说实在的，有时候下班回来也确实不想练，但是都还是坚持下来了。毕竟我就是死也得是一具强壮的尸体。再其次，如果以后被优化的时候，被保安抬出去之前说不定能多挣扎几分钟。好了就这样。下期，电台再见。</p>
 </article>
 </div>
 </div>
@@ -366,6 +340,34 @@
           </a>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Coding" class="md-footer__link md-footer__link--prev" href="../.." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              Coding
+            </div>
+</div>
+</a>
+<a aria-label="下一页: Gym" class="md-footer__link md-footer__link--next" href="../.." rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              Gym
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -386,7 +388,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.c99f48ec.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.c99f48ec.min.js"></script>
 <script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});</script></body>
 </html>
