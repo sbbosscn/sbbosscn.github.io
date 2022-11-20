@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="学习 沉淀 成长 分享" name="description"/>
 <meta content="Han Lu" name="author"/>
-<link href="https://www.sbboss.cn/DevOps/Docker/02-Docker%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="canonical"/>
+<link href="https://www.sbboss.cn/DevOps/Homework/week1/" rel="canonical"/>
 <link href="../../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.1, mkdocs-material-8.3.9" name="generator"/>
-<title>02-Docker中的几个基本概念 - sbboss</title>
+<title>1.week1 - sbboss</title>
 <link href="../../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -32,7 +32,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#02-docker">
+<a class="md-skip" href="#1">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              02-Docker中的几个基本概念
+              1.week1
             
           </span>
 </div>
@@ -163,7 +163,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Homework/week1/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         Homework
       </a>
 </li>
@@ -303,8 +303,8 @@
         Gym
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8">
           Homework
           <span class="md-nav__icon md-icon"></span>
@@ -315,10 +315,43 @@
           Homework
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Homework/week1/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          1.week1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         1.week1
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    什么是开源：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    什么是软件著作权：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    开源许可证的区别：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    理想主义者是不是开源成功的关键？
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -338,22 +371,23 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-    1.镜像
-  </a>
-<nav aria-label="1.镜像" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
-    镜像相关的操作
+    什么是开源：
   </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    什么是软件著作权：
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-    2.容器
+<a class="md-nav__link" href="#_3">
+    开源许可证的区别：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    理想主义者是不是开源成功的关键？
   </a>
 </li>
 </ul>
@@ -363,59 +397,203 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/02-Docker中的几个基本概念.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Homework/week1.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="02-docker">02-Docker中的几个基本概念<a class="headerlink" href="#02-docker" title="Permanent link">¶</a></h1>
-<h2 id="1">1.镜像<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
-<p>Docker的镜像可以理解为一个包含了os文件系统和应用的对象。如果你使用过一些虚拟化软件比如vmware公司的vspher产品或者是华为的fusioncompute等等，实际上的Docker镜像与这种虚拟化平台所提供或者制作的虚拟机模板是非常类似的。首先我们还是从虚拟机模板讲起，虚拟机的模板是只读的，模板本质是处于未运行状态的虚拟机。在Docker的概念中镜像世界上相当于为运行的容器。如果你有一定的开发经验可以将Docker中的镜像理解为class（只读类），运行中的镜像相当于是一个实例。</p>
-<p>​   镜像包含了基础操作系统，以及内部程序所运行所必须的代码和依赖包。Docker中的每个镜像都有自己唯一的ID。用户可以通过引用镜像的ID或者名称使用镜像或者对镜像执行一些列的操作。如果你需要使用镜像通常情况下只需要输入ID开头的几个字符即可——因为ID是唯一的，Docker会自动匹配用户想引用的镜像。</p>
-<h3 id="_1">镜像相关的操作<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>1.查看本机上的镜像  </p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># docker image ls</span>
+<h1 id="1">1.开源许可证<a class="headerlink" href="#1" title="Permanent link">¶</a></h1>
+<h2 id="_1">什么是开源：<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>开源是软件分发的一个手段。 开源是软件进行低成本推广的一个手段，开源解决不了软件的市场竞争力的问题。开源软件也需要持续的投入和维护才可能有未来。</p>
+<p>最早软件是随着硬件一并交付给最终用户的。当然也包含软件的源代码，不过那时候的软件规模也相对较小。后来随着有人促进美国立法，将软件纳入著作权保护的范畴和领域之内，再后来就衍生出了各类许可证。软件开始以具体的价格售卖。但是二进制包的售卖方式是没办法去查看和维护软件的。这就导致购买的软件在进行修改以及在不同的硬件平台上使用时遇到了很大的障碍。</p>
+<h2 id="_2">什么是软件著作权：<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>计算机软件著作权的内容是指软件著作权人依照法律享有的专有权利的总和，根据我国《计算机软件保护条例》的规定，软件著作权人享有下列各项权利：（1）发表权，即决定软件是否公之于众的权利；（2）署名权，即表明开发者身份，在软件上署名的权利；（3）修改权，即对软件进行增补、删节，或者改变指令、语句顺序的权利；（4）复制权，即将软件制作一份或者多份的权利；（5）发行权，即以出售或者赠与方式向公众提供软件的原件或者复制件的权利；（6）出租权，即有偿许可他人临时使用软件的权利，但是软件不是出租的主要标的的除外；（7）信息网络传播权，即以有线或者无线方式向公众提供软件，使公众可以在其个人选定的时间和地点获得软件的权利；（8）翻译权，即将原软件从一种自然语言文字转换成另一种自然语言文字的权利 [1] ；（9）应当由软件著作权人享有的其他权利。</p>
+<p>其中，署名权；修改权；复制权；发布权是软件著作权的四种基本权利。商业软件对于以上四种权力是进行保留的。并通过软件的最终解释权对用户的行为加以约束。</p>
+<h2 id="_3">开源许可证的区别：<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>下图来自阮一峰博客。</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/开源许可证.png"><img alt="" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/开源许可证.png"/></a></p>
+<h2 id="_4">理想主义者是不是开源成功的关键？<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p>源代码开放实际上无论从哪个角度来说都是一个比较有理想主义精神的事情。但是开源软件实际的情况来看，至少有90%的代码都是商业公司提供的，像Linux的源代码，基本上都是Intel，AMD，Redhat还有IBM这些公司提供给的，甚至微软公司也在十几年前开始向Linux提供源代码，提交了不少的驱动程序。对于为用户提供服务的软件来说，实际上是不是开源实际上可能并不会那么重要，说到底开源终究是软件进行低成本分发的一个手段。开源软件也不能逃避与商业软件的竞争。</p>
+<p>说到底现在有这么多的开源软件协议，从整个发展历程来说。基本上是逐渐向商业不断妥协的结果。</p>
+<p>开源会走向哪里我也不知道，但是，有一点我敢肯定，原来的Free Software太激进了，肯定是走不通的，动不动就让人家没钱赚，一下子就共产了，我觉得这是致命的自负。</p>
+<p>开源的成功，应该是理想主义，软件工程技术和商业策略成功的结合，仅仅靠理想主义，是走不到现在这个局面的。</p>
+<h1 id="2">2.安装操作系统<a class="headerlink" href="#2" title="Permanent link">¶</a></h1>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223357468.png"><img alt="image-20221120223357468" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223357468.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223428608.png"><img alt="image-20221120223428608" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223428608.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223501339.png"><img alt="image-20221120223459016" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223501339.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223539477.png"><img alt="image-20221120223539477" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223539477.png"/></a></p>
+<h1 id="3ifconfig">3.ifconfig命令的使用<a class="headerlink" href="#3ifconfig" title="Permanent link">¶</a></h1>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>man ifconfig
 </code></pre></div>
-<p>2.从Dockerhub拉取镜像</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># docker image pull ruby</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906124901159.png"><img alt="image-20210906124901159" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906124901159.png"/></a></p>
-<h2 id="2">2.容器<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
-<p>前面已经说明了镜像和容器之间的关系，我们可以把镜像类比成虚拟机中的模板，或者开发中的一个只读类。容器就相当于是一个运行中的虚拟机实例或者是类的一个实例。</p>
-<p>1.在Linux中启动容器的命令如下</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># docker container run -it ubuntu:latest /bin/bash</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906150133733.png"><img alt="image-20210906150133733" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906150133733.png"/></a></p>
-<p>docker container run 告诉Docker Daemon启动新的容器。其中-it参数告诉Docker开启容器的交互模式并将当前的shell连接到容器终端。接下来，用户想根据ubuntu:latest镜像创建一个新的容器。如果这个镜像在本地的话docker会使用本地的镜像启动该容器，如果不在本地，docker会自动通过网络下载ubuntu:latest镜像并启动进程。下次在通过ubuntu:latest镜像启动容器就会在本地启动。</p>
-<p>2.在容器内运行ps -elf查看当前所在的容器中正在运行中的进程。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906150837685.png"><img alt="image-20210906150837685" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906150837685.png"/></a></p>
-<p>在该容器中有两个进程PID1： /bin/bash进程。这个进程是docker container run 命令来通知容器运行的。</p>
-<p>PID10：代表的是ps -elf进程。这个进程实际上在ps -elf退出后这个进程就会消失。也就是说在这个容器中长期的存在的进程只有一个就是/bin/bash进程。
-3.从容器中退出，但是不销毁容器。保持容器的正常运行。</p>
-<p>​   <strong>使用ctrl + p + q</strong></p>
-<p>4.显示正在运行中的容器</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># docker container ls</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906151950175.png"><img alt="image-20210906151950175" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906151950175.png"/></a></p>
-<p>5.连接到正在运行中的容器中去</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># docker container exec -it competent_johnson bash</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906152458758.png"><img alt="image-20210906152458758" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906152458758.png"/></a></p>
-<p>在本次演示中容器实例的名称为competent_johnson这并不是人为创建的而是由docker自动生产的，用户每使用docker创建一个容器进程就会自动为该容器实例创建一个名称。</p>
-<p>6.容器的停止</p>
-<p>​   现在有一个正在运行中的容器。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153249179.png"><img alt="image-20210906153249179" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153249179.png"/></a></p>
-<p>停止容器</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># docker container stop competent_johnson</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153413263.png"><img alt="image-20210906153413263" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153413263.png"/></a></p>
-<p>我在此演示停止容器使用的是容器的名称，你也可以使用docker的ID停止相应容器。在此我不做演示。</p>
-<p>7.容器的删除(使用ID)</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># docker container rm 4c8686374687</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153806272.png"><img alt="image-20210906153806272" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906153806272.png"/></a></p>
-<p>8.列出所有的容器</p>
-<p>​   这一步的目的是确认下镜像已经被完全删除。其中-a参数的作用是实现让Docker列出所有的容器，包括处于停止状态的容器。</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># docker container ls -a</span>
-</code></pre></div>
+<h1 id="4linux">4.Linux的目录结构<a class="headerlink" href="#4linux" title="Permanent link">¶</a></h1>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223934702.png"><img alt="image-20221120223934702" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221120223934702.png"/></a></p>
+<p>表格来自wikipedia</p>
+<table>
+<thead>
+<tr>
+<th align="center">目录</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>/</code></td>
+<td align="center"><em>第一层次结构</em> 的根、 整个文件系统层次结构的<a href="https://zh.wikipedia.org/wiki/根目录">根目录</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/bin/</code></td>
+<td align="center">需要在<a href="https://zh.wikipedia.org/wiki/單用戶模式">单用户模式</a>可用的必要命令（<a href="https://zh.wikipedia.org/wiki/可执行文件">可执行文件</a>）；面向所有用户，<em>例如</em>： <a href="https://zh.wikipedia.org/wiki/Cat_(Unix)">cat</a>、 <a href="https://zh.wikipedia.org/wiki/Ls">ls</a>、 <a href="https://zh.wikipedia.org/wiki/Cp_(Unix)">cp</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/boot/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/引导程序">引导程序</a>文件，<em>例如：</em> <a href="https://zh.wikipedia.org/wiki/内核">kernel</a>、<a href="https://zh.wikipedia.org/wiki/Initrd">initrd</a>；时常是一个单独的分区[<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-8">8]</a></td>
+</tr>
+<tr>
+<td align="center"><code>/dev/</code></td>
+<td align="center">必要<a href="https://zh.wikipedia.org/wiki/设备文件系统">设备</a>, <em>例如：</em><code>/dev/null</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>/etc/</code></td>
+<td align="center">特定主机，系统范围内的<a href="https://zh.wikipedia.org/wiki/配置文件">配置文件</a>。关于这个名称目前有争议。在贝尔实验室关于UNIX实现文档的早期版本中，/etc 被称为*<a href="https://zh.wikipedia.org/wiki/等等">etcetera</a>*， [<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-9">9]</a> 这是由于过去此目录中存放所有不属于别处的所有东西（然而，FHS限制/etc只能存放静态配置文件，不能包含二进制文件）。 [<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-10">10]</a> 自从早期文档出版以来，目录名称已被以各种方式重新称呼。最近的解释包括<a href="https://zh.wikipedia.org/wiki/逆向首字母缩略词">逆向首字母缩略词</a>如："可编辑的文本配置"（英文 "Editable Text Configuration"）或"扩展工具箱"（英文 "Extended Tool Chest"）。 [<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-11">11]</a></td>
+</tr>
+<tr>
+<td align="center"><code>/etc/opt/</code></td>
+<td align="center"><code>/opt/</code>的配置文件</td>
+</tr>
+<tr>
+<td align="center"><code>/etc/X11/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/X_Window系统">X窗口系统</a>(版本11)的配置文件</td>
+</tr>
+<tr>
+<td align="center"><code>/etc/sgml/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/SGML">SGML</a>的配置文件</td>
+</tr>
+<tr>
+<td align="center"><code>/etc/xml/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/XML">XML</a>的配置文件</td>
+</tr>
+<tr>
+<td align="center"><code>/home/</code></td>
+<td align="center">用户的<a href="https://zh.wikipedia.org/wiki/家目录">家目录</a>，包含保存的文件、个人设置等，一般为单独的分区。</td>
+</tr>
+<tr>
+<td align="center"><code>/lib/</code></td>
+<td align="center"><code>/bin/</code> 和 <code>/sbin/</code>中二进制文件必要的<a href="https://zh.wikipedia.org/wiki/函式庫">库</a>文件。</td>
+</tr>
+<tr>
+<td align="center"><code>/media/</code></td>
+<td align="center">可移除媒体(如<a href="https://zh.wikipedia.org/wiki/CD-ROM">CD-ROM</a>)的挂载点 (在FHS-2.3中出现)。</td>
+</tr>
+<tr>
+<td align="center"><code>/mnt/</code></td>
+<td align="center">临时<a href="https://zh.wikipedia.org/wiki/挂载">挂载</a>的文件系统。</td>
+</tr>
+<tr>
+<td align="center"><code>/opt/</code></td>
+<td align="center">可选<a href="https://zh.wikipedia.org/wiki/应用软件">应用软件</a> <a href="https://zh.wikipedia.org/wiki/软件包">包</a>。[<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-12">12]</a></td>
+</tr>
+<tr>
+<td align="center"><code>/proc/</code></td>
+<td align="center">虚拟<a href="https://zh.wikipedia.org/wiki/文件系统">文件系统</a>，将<a href="https://zh.wikipedia.org/wiki/内核">内核</a>与<a href="https://zh.wikipedia.org/wiki/进程">进程</a>状态归档为文本文件。*例如：*uptime、 network。在Linux中，对应<a href="https://zh.wikipedia.org/wiki/Procfs">Procfs</a>格式挂载。</td>
+</tr>
+<tr>
+<td align="center"><code>/root/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/超级用户">超级用户</a>的<a href="https://zh.wikipedia.org/wiki/家目录">家目录</a></td>
+</tr>
+<tr>
+<td align="center"><code>/sbin/</code></td>
+<td align="center">必要的系统二进制文件，<em>例如：</em> init、 ip、 mount。</td>
+</tr>
+<tr>
+<td align="center"><code>/srv/</code></td>
+<td align="center">站点的具体<a href="https://zh.wikipedia.org/wiki/数据">数据</a>，由系统提供。</td>
+</tr>
+<tr>
+<td align="center"><code>/tmp/</code></td>
+<td align="center">临时文件(参见 <code>/var/tmp</code>)，在系统重启时目录中文件不会被保留。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/</code></td>
+<td align="center">用于存储只读用户数据的*第二层次*； 包含绝大多数的(<a href="https://zh.wikipedia.org/wiki/多用户">多</a>)用户工具和应用程序[<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-13">13]</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/bin/</code></td>
+<td align="center">非必要<a href="https://zh.wikipedia.org/wiki/可执行文件">可执行文件</a> (在<a href="https://zh.wikipedia.org/wiki/單用戶模式">单用户模式</a>中不需要)；面向所有用户。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/include/</code></td>
+<td align="center">标准<a href="https://zh.wikipedia.org/wiki/头文件">包含文件</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/lib/</code></td>
+<td align="center"><code>/usr/bin/</code>和<code>/usr/sbin/</code>中二进制文件的<a href="https://zh.wikipedia.org/wiki/库">库</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/sbin/</code></td>
+<td align="center">非必要的系统二进制文件，*例如：*大量<a href="https://zh.wikipedia.org/wiki/网络服务">网络服务</a>的<a href="https://zh.wikipedia.org/wiki/守护进程">守护进程</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/share/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/体系结构">体系结构</a>无关（共享）数据。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/src/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/源代码">源代码</a>,*例如:*内核源代码及其头文件。</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/X11R6/</code></td>
+<td align="center"><a href="https://zh.wikipedia.org/wiki/X_Window系统">X窗口系统</a> 版本 11, Release 6.</td>
+</tr>
+<tr>
+<td align="center"><code>/usr/local/</code></td>
+<td align="center">本地数据的*第三层次*， 具体到本台主机。通常而言有进一步的子目录， <em>例如：</em><code>bin/</code>、<code>lib/</code>、<code>share/</code>.[<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-14">14]</a></td>
+</tr>
+<tr>
+<td align="center"><code>/var/</code></td>
+<td align="center">变量文件——在正常运行的系统中其内容不断变化的文件，如日志，脱机文件和临时电子邮件文件。有时是一个单独的分区。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/cache/</code></td>
+<td align="center">应用程序缓存数据。这些数据是在本地生成的一个耗时的I/O或计算结果。应用程序必须能够再生或恢复数据。缓存的文件可以被删除而不导致数据丢失。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/lib/</code></td>
+<td align="center">状态信息。 由程序在运行时维护的持久性数据。 *例如：*数据库、包装的系统元数据等。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/lock/</code></td>
+<td align="center">锁文件，一类跟踪当前使用中资源的文件。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/log/</code></td>
+<td align="center">日志文件，包含大量日志文件，为了防止日志占满根分区，生产环境中一般是单独分区。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/mail/</code></td>
+<td align="center">用户的<a href="https://zh.wikipedia.org/wiki/电子邮箱">电子邮箱</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/run/</code></td>
+<td align="center">自最后一次启动以来运行中的系统的信息，*例如：*当前登录的用户和运行中的<a href="https://zh.wikipedia.org/wiki/守护进程">守护进程</a>、一些守护进程的pid文件、socket文件。现已经被/run代替[<a href="https://zh.wikipedia.org/wiki/文件系统层次结构标准#cite_note-15">15]</a>。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/spool/</code></td>
+<td align="center">等待处理的任务的<a href="https://zh.wikipedia.org/w/index.php?title=脱机文件&amp;action=edit&amp;redlink=1">脱机文件</a>，*例如：*打印队列和未读的邮件。</td>
+</tr>
+<tr>
+<td align="center"><code>/var/spool/mail/</code></td>
+<td align="center">用户的邮箱(不鼓励的存储位置)</td>
+</tr>
+<tr>
+<td align="center"><code>/var/tmp/</code></td>
+<td align="center">在系统重启过程中可以保留的临时文件。</td>
+</tr>
+<tr>
+<td align="center"><code>/run/</code></td>
+<td align="center">代替/var/run目录。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="5">5.后期学习的计划<a class="headerlink" href="#5" title="Permanent link">¶</a></h1>
+<p>尽力完成规定目标</p>
 </article>
 </div>
 </div>
@@ -425,6 +603,21 @@
           </a>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Gym" class="md-footer__link md-footer__link--prev" href="../../.." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              Gym
+            </div>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
