@@ -1,0 +1,940 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="学习 沉淀 成长 分享" name="description"/>
+<meta content="Han Lu" name="author"/>
+<link href="https://www.sbboss.cn/DevOps/Homework/week2/" rel="canonical"/>
+<link href="../../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.3.9" name="generator"/>
+<title>week2 - sbboss</title>
+<link href="../../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#week2">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="sbboss" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
+<path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
+<path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z"></path>
+<path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25"></path>
+</svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            sbboss
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              week2
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sbbosscn/sbbosscn.github.io" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    HanLu/sbboss
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Cloudcomputing
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      HCIE
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+        DevOps
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Coding
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+        Radio
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Gym
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../week1/">
+        Homework
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="sbboss" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
+<path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
+<path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z"></path>
+<path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25"></path>
+</svg>
+</a>
+    sbboss
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sbbosscn/sbbosscn.github.io" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    HanLu/sbboss
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Cloudcomputing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        HCIE
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="DevOps" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          DevOps
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Network" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+        00-pnetlab从安装到登录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/">
+        01-PNETLab加载镜像包
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Routingswitch/%E6%95%B0%E9%80%9A%E7%9F%A5%E8%AF%86%E5%AE%9D%E5%85%B8_v1.6.1/">
+        数通知识宝典
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          KVM
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="KVM" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          KVM
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+        00-KVM实践环境搭建
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Coding
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          Radio
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Radio" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Radio
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+        1.半吊子工程师健身指南
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Gym
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          Homework
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Homework" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Homework
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../week1/">
+        1.week1
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1linux">
+    1.Linux的安全性：
+  </a>
+<nav aria-label="1.Linux的安全性：" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#etcpasswd">
+    /etc/passwd文件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#etcshadow">
+    /etc/shadow文件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2linux">
+    2.Linux下的用户操作
+  </a>
+<nav aria-label="2.Linux下的用户操作" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1useradd">
+    1.添加用户：useradd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2userdel">
+    2.删除用户：userdel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3.修改用户
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-1-usermod">
+    3-1 usermod
+  </a>
+<nav aria-label="3-1 usermod" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-2">
+    3-2 单一功能用户修改命令
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3linux">
+    3.Linux下的用户组操作
+  </a>
+<nav aria-label="3.Linux下的用户组操作" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#etcgroup">
+    /etc/group
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1groupadd">
+    1.创建新组：groupadd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2usermod-g">
+    2.添加用户到组：usermod -G 组名 用户名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3groupmod">
+    3.修改组：groupmod
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+    4.文件权限
+  </a>
+<nav aria-label="4.文件权限" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-1">
+    4-1.默认文件权限
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5vim">
+    5.VIM操作
+  </a>
+<nav aria-label="5.VIM操作" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1.移动
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6shell">
+    6.shell脚本编程
+  </a>
+<nav aria-label="6.shell脚本编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_1">
+    1.使用多个命令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2shell">
+    2.创建shell脚本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3_1">
+    3.运行脚本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4_1">
+    4.命令替换
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+    5.重定向
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Homework/week2.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="week2">week2<a class="headerlink" href="#week2" title="Permanent link">¶</a></h1>
+<h2 id="1linux">1.Linux的安全性：<a class="headerlink" href="#1linux" title="Permanent link">¶</a></h2>
+<p>​   Linux安全系统的核心是用户账户。每个能进入Linux系统的用户都会被分配唯一的用户账户。用户对系统中各种对象的访问权限取决于他们登录系统时用的账户。</p>
+<p>​   用户权限是通过创建用户时分配的用户ID（User ID，通常缩写为UID）来跟踪的。UID是数值，每个用户都有唯一的UID，但在登录系统时用的不是UID，而是登录名。登录名是用户用来登录系统的最长八字符的字符串（字符可以是数字或字母），同时会关联一个对应的密码。</p>
+<h3 id="etcpasswd">/etc/passwd文件<a class="headerlink" href="#etcpasswd" title="Permanent link">¶</a></h3>
+<p>linux使用一个专门的文件将用户的登录名匹配到对应的UID值。这个文件就是/etc/passwd文件。该文件中包含了一些与用户相关的信息。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>[root@rocky8 ~]# cat /etc/passwd
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>root:x:0:0:root:/root:/bin/bash
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>bin:x:1:1:bin:/bin:/sbin/nologin
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>daemon:x:2:2:daemon:/sbin:/sbin/nologin
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>adm:x:3:4:adm:/var/adm:/sbin/nologin
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>sync:x:5:0:sync:/sbin:/bin/sync
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>halt:x:7:0:halt:/sbin:/sbin/halt
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>operator:x:11:0:operator:/root:/sbin/nologin
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>games:x:12:100:games:/usr/games:/sbin/nologin
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>dbus:x:81:81:System message bus:/:/sbin/nologin
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>systemd-resolve:x:193:193:systemd Resolver:/:/sbin/nologin
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>tss:x:59:59:Account used for TPM access:/dev/null:/sbin/nologin
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>unbound:x:997:995:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>geoclue:x:996:994:User for geoclue:/var/lib/geoclue:/sbin/nologin
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>pipewire:x:995:991:PipeWire System Daemon:/var/run/pipewire:/sbin/nologin
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>qemu:x:107:107:qemu user:/:/sbin/nologin
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>clevis:x:994:988:Clevis Decryption Framework unprivileged user:/var/cache/clevis:/sbin/nologin
+</code></pre></div>
+<p>​   root用户是Linux系统的管理员，分配给它的固定UID是0。在Linux系统中会为不同的功能创建不通过的用户账户，这些账户的作用是在在Linux系统上运行不同的服务进程访问资源所需要的特殊账户。所有运行在后台的服务都需要用一个系统账户登录到Linux系统上。</p>
+<p>​   /etc/passwd文件中除了用户名和UID之外还有很多其他字段。/etc/passwd文件字段中国包含了如下信息。</p>
+<ol>
+<li>登录用户名</li>
+<li>用户密码</li>
+<li>用户的UID（数字形式）</li>
+<li>用户的组ID（数字形式）</li>
+<li>用户的文本描述（备注字段）</li>
+<li>用户HOME目录的位置</li>
+<li>用户默认的shell</li>
+</ol>
+<p>​   /etc/passwd文件中的密码字段都被设置成了x，这并不是说所有的用户账户都用相同的密码。在早期的Linux上，/etc/passwd文件里有加密后的用户密码。但鉴于很多程序都需要访问/etc/passwd文件获取用户信息，这就成了一个安全隐患。随着用来破解加密密码的工具的不断演进，用心不良的人开始忙于破解存储在/etc/passwd文件中的密码。</p>
+<p>​   现在绝大多数Linux系统将用户密码保存在另外一个单独的文件中（/etc/shadow）。只有特地给的程序才能访问这个文件。</p>
+<h3 id="etcshadow">/etc/shadow文件<a class="headerlink" href="#etcshadow" title="Permanent link">¶</a></h3>
+<p>​   /etc/passwd文件中的密码字段都被设置成了x，这并不是说所有的用户账户都用相同的密码。在早期的Linux上，/etc/passwd文件里有加密后的用户密码。但鉴于很多程序都需要访问/etc/passwd文件获取用户信息，这就成了一个安全隐患。随着用来破解加密密码的工具的不断演进，用心不良的人开始忙于破解存储在/etc/passwd文件中的密码。记录如下：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>h:$6$vlwVGTB1mmYP76UY$0H.1SgqNiOxkVLzDU7QmlyZ8oYS3cd90k0mQWe3o.zaJlLEPunsAQF1.yOurWDBkEXuz86/DEULg9PFiAxPkU1:19328:0:99999:7:::
+</code></pre></div>
+<p>​   /etc/shadow文件中每一个用户都存在一条记录，每条记录包含9个字段。</p>
+<ol>
+<li>登录名</li>
+<li>加密后的密码</li>
+<li>自上次修改密码后过去的天数（从1970年1月1日开始计算）</li>
+<li>多少天后才能更改密码</li>
+<li>多少天后必须更改密码</li>
+<li>密码过期提前多少天提醒用户更改密码</li>
+<li>密码过期多少天禁用用户账户</li>
+<li>用户账户被禁用的日期</li>
+<li>预留字段给将来使用</li>
+</ol>
+<h2 id="2linux">2.Linux下的用户操作<a class="headerlink" href="#2linux" title="Permanent link">¶</a></h2>
+<h3 id="1useradd">1.添加用户：useradd<a class="headerlink" href="#1useradd" title="Permanent link">¶</a></h3>
+<p>使用useradd命令可以创建用户账户以及用户账户的HOME目录结构。useradd命令使用系统默认值以及命令行参数来设置用户账户。系统默认值被放置在/etc/default/useradd文件中。也可以使用useradd -D来查看默认参数。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">[</span>root@rocky8 ~<span class="o">]</span><span class="c1"># cat /etc/default/useradd</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1"># useradd defaults file</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nv">GROUP</span><span class="o">=</span><span class="m">100</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nv">HOME</span><span class="o">=</span>/home
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nv">INACTIVE</span><span class="o">=</span>-1
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nv">EXPIRE</span><span class="o">=</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nv">SKEL</span><span class="o">=</span>/etc/skel
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nv">CREATE_MAIL_SPOOL</span><span class="o">=</span>yes
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">[</span>root@rocky8 ~<span class="o">]</span><span class="c1"># useradd -D</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nv">GROUP</span><span class="o">=</span><span class="m">100</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nv">HOME</span><span class="o">=</span>/home
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">INACTIVE</span><span class="o">=</span>-1
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nv">EXPIRE</span><span class="o">=</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nv">SKEL</span><span class="o">=</span>/etc/skel
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nv">CREATE_MAIL_SPOOL</span><span class="o">=</span>yes
+</code></pre></div>
+<p>useradd允许管理员创建一份默认的HOME目录配置，然后将其作为创建新用户HOME目录的模板。这样就能在每个新用户创建时自动在每个新用户的HOME目录下放置默认的系统文件。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>[root@rocky8 ~]# cd /etc/skel/
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>[root@rocky8 skel]# ll -a
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>total 24
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>drwxr-xr-x.   3 root root   78 11月 12 20:38 .
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>drwxr-xr-x. 147 root root 8192 12月 12 13:51 ..
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>-rw-r--r--.   1 root root   18 8月   2 15:41 .bash_logout
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>-rw-r--r--.   1 root root  141 8月   2 15:41 .bash_profile
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>-rw-r--r--.   1 root root  376 8月   2 15:41 .bashrc
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>drwxr-xr-x.   4 root root   39 11月 12 20:37 .mozilla
+</code></pre></div>
+<h3 id="2userdel">2.删除用户：userdel<a class="headerlink" href="#2userdel" title="Permanent link">¶</a></h3>
+<p>​   userdel可以删除系统中的用户信息，但是默认情况下，userdel命令只会删除/etc/passwd文件中的用户信息，并不会删除该系统中属于该账户的任何文件。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>[root@rocky8 ~]# userdel usertest
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>userdel: user usertest is currently used by process 3273
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>[root@rocky8 ~]# cd /home/
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>[root@rocky8 home]# ls
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>_D  h  meet  moot  usertest  xxxxxxxxxxxxxxxxxxxxxxxxx
+</code></pre></div>
+<h3 id="3">3.修改用户<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
+<h3 id="3-1-usermod">3-1 usermod<a class="headerlink" href="#3-1-usermod" title="Permanent link">¶</a></h3>
+<p>usermod命令是用户账户修改工具中最强大的一个，它能够用使用不同的参数来修改/etc/passwd中的大部分字段。</p>
+<p>举例：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>usermod</td>
+<td>-l</td>
+<td>修改用户的登录名</td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>-L</td>
+<td>锁定用户；使用户无法登录</td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>-p</td>
+<td>修改用户密码</td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>-U</td>
+<td>解锁用户账户</td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>-c</td>
+<td>修改新备注</td>
+</tr>
+</tbody>
+</table>
+<p>详细功能：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>[root@rocky8 home]# usermod --help
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>Usage: usermod [options] LOGIN
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>Options:
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>  -c, --comment COMMENT         new value of the GECOS field
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>  -d, --home HOME_DIR           new home directory for the user account
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>  -f, --inactive INACTIVE       set password inactive after expiration
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>                                to INACTIVE
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>  -g, --gid GROUP               force use GROUP as new primary group
+<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>  -G, --groups GROUPS           new list of supplementary GROUPS
+<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>  -a, --append                  append the user to the supplemental GROUPS
+<a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a>                                mentioned by the -G option without removing
+<a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>                                the user from other groups
+<a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a>  -h, --help                    display this help message and exit
+<a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a>  -l, --login NEW_LOGIN         new value of the login name
+<a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a>  -L, --lock                    lock the user account
+<a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a>  -m, --move-home               move contents of the home directory to the
+<a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a>                                new location (use only with -d)
+<a href="#__codelineno-6-20" id="__codelineno-6-20" name="__codelineno-6-20"></a>  -o, --non-unique              allow using duplicate (non-unique) UID
+<a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a>  -p, --password PASSWORD       use encrypted password for the new password
+<a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a>  -R, --root CHROOT_DIR         directory to chroot into
+<a href="#__codelineno-6-23" id="__codelineno-6-23" name="__codelineno-6-23"></a>  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+<a href="#__codelineno-6-24" id="__codelineno-6-24" name="__codelineno-6-24"></a>  -s, --shell SHELL             new login shell for the user account
+<a href="#__codelineno-6-25" id="__codelineno-6-25" name="__codelineno-6-25"></a>  -u, --uid UID                 new UID for the user account
+<a href="#__codelineno-6-26" id="__codelineno-6-26" name="__codelineno-6-26"></a>  -U, --unlock                  unlock the user account
+<a href="#__codelineno-6-27" id="__codelineno-6-27" name="__codelineno-6-27"></a>  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+<a href="#__codelineno-6-28" id="__codelineno-6-28" name="__codelineno-6-28"></a>  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+<a href="#__codelineno-6-29" id="__codelineno-6-29" name="__codelineno-6-29"></a>  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+<a href="#__codelineno-6-30" id="__codelineno-6-30" name="__codelineno-6-30"></a>  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+<a href="#__codelineno-6-31" id="__codelineno-6-31" name="__codelineno-6-31"></a>  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+</code></pre></div>
+<h4 id="3-2">3-2 单一功能用户修改命令<a class="headerlink" href="#3-2" title="Permanent link">¶</a></h4>
+<p>passwd：修改用户密码</p>
+<h2 id="3linux">3.Linux下的用户组操作<a class="headerlink" href="#3linux" title="Permanent link">¶</a></h2>
+<p>​     用户账户在控制单个用户安全性方面非常好用，但是在涉及共享资源的一组用户时就比较捉襟见肘了。Linux才用用户组的概念，使用组去批量限制多个用户的权限。</p>
+<h3 id="etcgroup">/etc/group<a class="headerlink" href="#etcgroup" title="Permanent link">¶</a></h3>
+<p>​   跟用户账户类似的，组的信息会单独保存在Linux系统中的一个文件中。/etc/group文件系统包含了系统上用到的每个用户组的信息。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>[root@rocky8 ~]# cat /etc/gro
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>groff/  group   group-
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>[root@rocky8 ~]# cat /etc/group
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>root:x:0:
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>bin:x:1:
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>daemon:x:2:
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>sys:x:3:
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a>adm:x:4:
+<a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>tty:x:5:
+<a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a>disk:x:6:
+<a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a>lp:x:7:
+<a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a>mem:x:8:
+<a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a>kmem:x:9:
+<a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>wheel:x:10:h
+<a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a>cdrom:x:11:
+<a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a>mail:x:12:postfix
+<a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a>man:x:15:
+<a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a>dialout:x:18:
+<a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a>floppy:x:19:
+<a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a>games:x:20:
+<a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a>tape:x:33:
+<a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a>video:x:39:
+<a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a>ftp:x:50:
+<a href="#__codelineno-7-24" id="__codelineno-7-24" name="__codelineno-7-24"></a>lock:x:54:
+<a href="#__codelineno-7-25" id="__codelineno-7-25" name="__codelineno-7-25"></a>audio:x:63:
+<a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a>users:x:100:
+<a href="#__codelineno-7-27" id="__codelineno-7-27" name="__codelineno-7-27"></a>nobody:x:65534:
+<a href="#__codelineno-7-28" id="__codelineno-7-28" name="__codelineno-7-28"></a>dbus:x:81:
+<a href="#__codelineno-7-29" id="__codelineno-7-29" name="__codelineno-7-29"></a>utmp:x:22:
+<a href="#__codelineno-7-30" id="__codelineno-7-30" name="__codelineno-7-30"></a>utempter:x:35:
+<a href="#__codelineno-7-31" id="__codelineno-7-31" name="__codelineno-7-31"></a>input:x:999:
+<a href="#__codelineno-7-32" id="__codelineno-7-32" name="__codelineno-7-32"></a>kvm:x:36:qemu
+</code></pre></div>
+<p>与UID一样，GID在分配时也采用了特定的格式。系统账户用的组通常会分配低于500的GID值，用户组的GID则会从500开始分配。</p>
+<p>/etc/group文件有四个字段</p>
+<ul>
+<li>组名</li>
+<li>组密码</li>
+<li>GID</li>
+<li>属于该组的用户列表</li>
+</ul>
+<h3 id="1groupadd">1.创建新组：groupadd<a class="headerlink" href="#1groupadd" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>[root@rocky8 ~]# groupadd testgroup
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>[root@rocky8 ~]# tail /etc/group
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>_osbuild-composer:x:972:
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>tlog:x:971:
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>apache:x:48:
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>xxxxxxxxxxxxxxxxxxxxxxxxx:x:1001:
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>_D:x:1002:
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>meet:x:1003:
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>moot:x:1004:
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>usertest:x:1005:
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>hh:x:1006:
+<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>testgroup:x:1007:
+</code></pre></div>
+<h3 id="2usermod-g">2.添加用户到组：usermod -G 组名 用户名<a class="headerlink" href="#2usermod-g" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>[root@rocky8 ~]# useradd test1
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>[root@rocky8 ~]# useradd test2
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>[root@rocky8 ~]# useradd test3
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>[root@rocky8 ~]# usermod  -G testgroup test1
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>[root@rocky8 ~]# usermod  -G testgroup test2
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>[root@rocky8 ~]# usermod  -G testgroup test3
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>[root@rocky8 ~]# tail /etc/group
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>xxxxxxxxxxxxxxxxxxxxxxxxx:x:1001:
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>_D:x:1002:
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>meet:x:1003:
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a>moot:x:1004:
+<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>usertest:x:1005:
+<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a>hh:x:1006:
+<a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>testgroup:x:1007:test1,test2,test3
+<a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>test1:x:1008:
+<a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a>test2:x:1009:
+<a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a>test3:x:1010:
+</code></pre></div>
+<h3 id="3groupmod">3.修改组：groupmod<a class="headerlink" href="#3groupmod" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>[root@rocky8 ~]# groupmod --help
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>Usage: groupmod [options] GROUP
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>Options:
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>  -g, --gid GID                 change the group ID to GID
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>  -h, --help                    display this help message and exit
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>  -n, --new-name NEW_GROUP      change the name to NEW_GROUP
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>  -o, --non-unique              allow to use a duplicate (non-unique) GID
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>  -p, --password PASSWORD       change the password to this (encrypted)
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>                                PASSWORD
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>  -R, --root CHROOT_DIR         directory to chroot into
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+</code></pre></div>
+<h2 id="4">4.文件权限<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221212151513360.png"><img alt="文件权限" src="https://sbboss-img.oss-cn-shanghai.aliyuncs.com/img/image-20221212151513360.png"/></a></p>
+<h3 id="4-1">4-1.默认文件权限<a class="headerlink" href="#4-1" title="Permanent link">¶</a></h3>
+<p>文件的默认权限来自于umask；umask命令用来设置和创建文件和目录的默认权限。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>[root@rocky8 ~]# umask
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>0022
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>[root@rocky8 ~]#
+</code></pre></div>
+<p>Linux系统中分为文件和目录文件的需要有读写的权限而不需要执行，文件的全权限是666即为二进制的110 110 110 ，umask给定的掩码为0022。取后三位为二进制的000 010 010与上面的二进制的666进行异或运算则结果为644.同理目录的默认全权限跟umask进行异或结果是755.</p>
+<h2 id="5vim">5.VIM操作<a class="headerlink" href="#5vim" title="Permanent link">¶</a></h2>
+<p>其实很简单 有个游戏叫做 vimtutor，耐住性子玩几遍就差不多了。</p>
+<h3 id="1">1.移动<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
+<p>1.基础移动</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>         ** 要移动光标，请依照说明分别按下 h、j、k、l 键。 **
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>             ^
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>             k              提示： h 的键位于左边，每次按下就会向左移动。
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>       &lt; h       l &gt;               l 的键位于右边，每次按下就会向右移动。
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>             j                     j 键看起来很象一支尖端方向朝下的箭头。
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>             v
+</code></pre></div>
+<p>2.指定移动位数</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a> 1. 输入 2w 使光标向前移动两个单词。
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a> 2. 输入 3e 使光标向前移动到第三个单词的末尾。
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a> 3. 输入 0 (数字零) 移动光标到行首。
+</code></pre></div>
+<h2 id="6shell">6.shell脚本编程<a class="headerlink" href="#6shell" title="Permanent link">¶</a></h2>
+<h3 id="1_1">1.使用多个命令<a class="headerlink" href="#1_1" title="Permanent link">¶</a></h3>
+<p>​   shell脚本的关键在于输入多个命令并输出每个命令的结果。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>root@ubuntu:~# date; who
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>Tue Dec 13 01:13:12 AM UTC 2022
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>h        pts/0        2022-12-13 01:11 (10.0.0.1)
+</code></pre></div>
+<h3 id="2shell">2.创建shell脚本<a class="headerlink" href="#2shell" title="Permanent link">¶</a></h3>
+<p>使用文本编辑器，创建一个文件；并在第一行的指定要使用的shell类型。可以使用#添加注释</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>root@ubuntu:~# vim test.sh
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>root@ubuntu:~# cat test.sh
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>!/bin/bash
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="c1">#This script displays the data and who's logged on</span>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>date
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>who
+</code></pre></div>
+<h3 id="3_1">3.运行脚本<a class="headerlink" href="#3_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>首先要让bash shell能够找到你自己写的脚本文件，shell会通过PATH环境变量查找命令。</p>
+</li>
+<li>
+<p>查看PATH环境变量：</p>
+</li>
+<li>
+<p><sub>~</sub>
+    root@ubuntu:~# echo  $PATH
+    /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+    <sub>~</sub></p>
+</li>
+<li>
+<p>使用脚本的两种方式</p>
+</li>
+<li>
+<p>1.将shell脚本文件所在的目录添加到PATH环境变量中</p>
+</li>
+<li>
+<p>2.在提示符中使用绝对或者相对路径来引用shell脚本文件</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>root@ubuntu:~# ./test.sh
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>-bash: ./test.sh: Permission denied
+</code></pre></div>
+<p>上面执行脚本被拒绝，在执行之前要给脚本赋予执行权限。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>root@ubuntu:~# chmod u+x test.sh
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>-rwxr--r--  1 root root    71 Dec 13 01:18 test.sh*
+</code></pre></div>
+</li>
+<li>
+<p>使用./test.sh执行脚本</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>root@ubuntu:~# ./test.sh
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>./test.sh: line 1: !/bin/bash: No such file or directory
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>Tue Dec 13 01:32:35 AM UTC 2022
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>h        pts/0        2022-12-13 01:11 (10.0.0.1)
+</code></pre></div>
+</li>
+</ul>
+<h3 id="4_1">4.命令替换<a class="headerlink" href="#4_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>反引号</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>root@ubuntu:~/shell# cat test4.sh
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>#!/bin/bash
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>testing=`date`
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>echo "The date and time are:" $testing
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a>root@ubuntu:~/shell# sh test4.sh
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a>The date and time are: Tue Dec 13 02:17:49 AM UTC 2022
+</code></pre></div>
+<ul>
+<li>$()格式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>root@ubuntu:~/shell# cat test5.sh
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>#!/bin/bash
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>testing=$(date)
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>echo "The date and time are:" $testing
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>root@ubuntu:~/shell# ./test5.sh
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>The date and time are: Tue Dec 13 02:18:40 AM UTC 2022
+</code></pre></div>
+<h3 id="5">5.重定向<a class="headerlink" href="#5" title="Permanent link">¶</a></h3>
+<ul>
+<li>输出重定型</li>
+</ul>
+<p>最基本的重定向将命令的输出发送到一个文件中。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>root@ubuntu:~/shell# cat datetest.sh
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>Tue Dec 13 05:46:42 AM UTC 2022
+</code></pre></div>
+<p>覆盖重定向</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>root@ubuntu:~/shell# date &gt; datetest.sh
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>root@ubuntu:~/shell# cat datetest.sh
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>Tue Dec 13 05:47:25 AM UTC 2022
+</code></pre></div>
+<p>追加重定向</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>root@ubuntu:~/shell# date &gt;&gt; datetest.sh
+<a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>root@ubuntu:~/shell# cat datetest.sh
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>Tue Dec 13 05:47:25 AM UTC 2022
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>Tue Dec 13 05:47:59 AM UTC 2022
+</code></pre></div>
+<ul>
+<li>输入重定向 </li>
+</ul>
+<p>输入重定向是将文件内容重定向到命令</p>
+<p>wc能够对数据中的文本进行计数，默认情况下会输出</p>
+<p>1.文本的行数</p>
+<p>2.文本的词数</p>
+<p>3.文本的字节数</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>root@ubuntu:~/shell# wc &lt; datetest.sh
+<a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a> 2 14 64
+</code></pre></div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            回到页面顶部
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2016 - 2022 Han Lu
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.c99f48ec.min.js"></script>
+<script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});</script></body>
+</html>

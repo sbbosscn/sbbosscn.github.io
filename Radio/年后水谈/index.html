@@ -7,32 +7,32 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="学习 沉淀 成长 分享" name="description"/>
 <meta content="Han Lu" name="author"/>
-<link href="https://www.sbboss.cn/DevOps/Docker/01-docker%E5%8D%87%E7%BA%A7/" rel="canonical"/>
-<link href="../../../assets/favicon.png" rel="icon"/>
+<link href="https://www.sbboss.cn/Radio/%E5%B9%B4%E5%90%8E%E6%B0%B4%E8%B0%88/" rel="canonical"/>
+<link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.1, mkdocs-material-8.3.9" name="generator"/>
-<title>docker 升级教程 - sbboss</title>
-<link href="../../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<title>年后水谈 - sbboss</title>
+<link href="../../assets/stylesheets/main.1dff34a1.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
-            </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -40,7 +40,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="sbboss" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<a aria-label="sbboss" class="md-header__button md-logo" data-md-component="logo" href="../.." title="sbboss">
 <svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
 <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              docker 升级教程
+              年后水谈
             
           </span>
 </div>
@@ -128,42 +128,42 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Cloudcomputing
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       HCIE
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-tabs__link" href="../../DevOps/Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         DevOps
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Coding
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+<a class="md-tabs__link" href="../%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
         Radio
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Gym
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Homework/week1/">
+<a class="md-tabs__link" href="../../DevOps/Homework/week1/">
         Homework
       </a>
 </li>
@@ -177,7 +177,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="sbboss" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="sbboss">
+<a aria-label="sbboss" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="sbboss">
 <svg viewbox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z"></path>
 <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5"></path>
@@ -199,17 +199,17 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Cloudcomputing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         HCIE
       </a>
 </li>
@@ -238,12 +238,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
+<a class="md-nav__link" href="../../DevOps/Network/00pnetlab%E4%BB%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E5%BD%95/">
         00-pnetlab从安装到登录
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/">
+<a class="md-nav__link" href="../../DevOps/Network/01-PNETLab%E5%8A%A0%E8%BD%BD%E9%95%9C%E5%83%8F%E5%8C%85/">
         01-PNETLab加载镜像包
       </a>
 </li>
@@ -251,7 +251,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Routingswitch/%E6%95%B0%E9%80%9A%E7%9F%A5%E8%AF%86%E5%AE%9D%E5%85%B8_v1.6.1/">
+<a class="md-nav__link" href="../../DevOps/Routingswitch/%E6%95%B0%E9%80%9A%E7%9F%A5%E8%AF%86%E5%AE%9D%E5%85%B8_v1.6.1/">
         数通知识宝典
       </a>
 </li>
@@ -268,7 +268,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+<a class="md-nav__link" href="../../DevOps/KVM/00KVM%E5%AE%9E%E8%B7%B5%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
         00-KVM实践环境搭建
       </a>
 </li>
@@ -279,7 +279,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Coding
       </a>
 </li>
@@ -296,7 +296,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Radio/%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
+<a class="md-nav__link" href="../%E6%96%B0%E7%9A%84%E4%B8%80%E6%9C%9F%E7%94%B5%E5%8F%B0/">
         1.半吊子工程师健身指南
       </a>
 </li>
@@ -304,7 +304,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Gym
       </a>
 </li>
@@ -321,7 +321,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Homework/week1/">
+<a class="md-nav__link" href="../../DevOps/Homework/week1/">
         1.week1
       </a>
 </li>
@@ -337,60 +337,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1docker">
-    1.docker升级的准备工作
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/DevOps/Docker/01-docker升级.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/sbbosscn/sbbosscn.github.io/edit/master/docs/Radio/年后水谈.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="docker">docker 升级教程<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
-<h2 id="1docker">1.docker升级的准备工作<a class="headerlink" href="#1docker" title="Permanent link">¶</a></h2>
-<p>1.停止Docker的守护进程</p>
-<p>2.移除旧版本的Docker</p>
-<p>3.安装新版本的Docker</p>
-<p>4.配置新版本的Docker为开机自动启动</p>
-<p>5.确保容器重启成功</p>
-<p>以Centos7为例</p>
-<p>将Centos7上的Docker从17.03.0升级到最新版本。</p>
-<p>1.查看当前的Docker版本</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104425733.png"><img alt="image-20210906104425733" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104425733.png"/></a></p>
-<p>2.移除旧版本的Docker</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># yum remove docker docker-engine docker-ce docker.io -y</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104629484.png"><img alt="image-20210906104629484" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906104629484.png"/></a></p>
-<p>3.升级centos的软件包</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># yum update    </span>
-</code></pre></div>
-<p>3.使用脚本安装最新版本的Docker</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># wget -qO- https://get.docker.com/ | sh</span>
-</code></pre></div>
-<p>4.等待升级完成查看当前的docker版本</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
-<p>5.将docker设置为开机自动启动</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># systemctl start docker</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="c1"># systemctl enable docker</span>
-</code></pre></div>
-<p>6.查看当前的docker版本</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># docker version</span>
-</code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906105441367.png"><img alt="image-20210906105441367" src="https://gitee.com/hanstack/hanstack_image/raw/master/img/image-20210906105441367.png"/></a></p>
+<h1 id="_1">年后水谈<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>首先要跟大家说一下为什么这一期的名字叫“年后水谈”；其实我也想把这个名字起的文雅一点，比如交个“年后茶谈”，但是由于我不喜欢喝茶，在家里也不会常备着茶叶。我写电台的时候喝的基本都是水或者是饮料。还有就是我觉得我讲的东西也挺水的于是综上所述就叫”年后水谈“了。</p>
+<p>这一期电台属于是没有目的，也没有计划的。其实今天是要计划干点活的但是实在没心情，于是就不干了，反正也没什么大不了的，就突出一个率性和无所吊谓。</p>
+<p>之前决定试着写电台的时候主要是想找一个情绪的出口；人人都有坏情绪。只不过是发泄的出口不一样罢了。说起来选择写电台这种途径可能更多的是受了一位老哥的影响。从某种意义上说他还是我的老乡。我最早情绪不好的时候还没有发展自己的写电台的程度，症状比较轻的时候主要是听老哥的电台。我最喜欢听他电台里的故事了。以前他在自己的公众号也发表过一个没有完结的小说《刘栋梁的故事》那时候他的电台叫做《软件那些事》。我在他群里是他的粉丝。每当我因为生活的打击情绪低落的时候都会去看看老哥写的《刘栋梁的故事》看完了之后尽然有一种自己过的还不错的错觉。于是就能够勇敢的走进一家热干面店，点上一份5块钱的热干面还要在加上一个卤蛋。一定要坐在屋子里吃完再走，而不是只要一份不加卤蛋的热干面带回去吃。再后来生活并没有对我进行了无耻的不间断的偷袭，我还是间歇性的处在一个比较穷困潦倒的生存状态里面，无法自拔。于是我从那时候起就决定自己也写个电台玩玩。</p>
+<p>既然决定写电台了就要看看做电台究竟是需要那些设备呢，我在B站结结实实的看了好几天，知乎上也搜了搜。好家伙从软件到硬件还是真不少，有些人就说至少得买一个麦克分吧。然后我就大概的看了看。其中一个推荐最多的就是那个罗技的Blue yeti。不过说实话那个麦克风确实看起来非常的炫酷和专业。但是一千大几的价格我属实高攀不起，所以我最早几期录音都是用我的三星手机录的。还有几期是在用耳机上的那个麦克风在楼道里录的，应该是。那时候实际上我对这个电台还是挺上心的。我感觉录的效果确实不咋地于是就还是想着买一个麦克风。最后我在闲鱼上买了个二手的snow ball也是罗技的一个麦克风当时花了差不多300块左右吧。当时还挺开心，但是我当时住的地方录音条件还是比较差的。因为那时候房间里除了人意外还有几台服务器。运行的时候噪音还是有一些的。实际上录出来我感觉效果也不是很好，再后来我换了地方效果也好了但是我就不怎么更新电台了。</p>
+<p>所有事情对大部分来说可能开头都不算是非常的困难，比较困难的实际上是长久坚持下去。这个真的很难，起码在我这里是这样的。也可能是做着做着就没什么信心了。最近使我重拾信心的一件事实际上有人说我讲课的风格还可以于是我就重拾了一下信心打算录点课程什么的。录着玩一边学习一边录制。所以为此我又新开了一个B站的账号。初步计划是讲点网络相关的后面也可能更新点其他方向的内容，走一步看一步吧。</p>
+<p>其实从工作之后我实际上是越来越悲观的一个状态，作为一个芸芸众生里面的普通人，我还是想留下一点数字世界的资产。对于我这种屌丝来说，留下的物理的资产实际上不太现实的，对此我特别的悲观。但是能留下一点视频资料我觉得我还是能够做到的，当然要是有机会的话我也想出本书什么的，但是这个太远了基本上看不到。最后安利一下我的B站账号“半吊子老法师”。不过现在这个账号暂时还没有任何内容，因为是昨天才注册的，希望我能够做到一周一更吧。就到这里再见。</p>
 </article>
 </div>
 </div>
@@ -420,7 +382,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.c99f48ec.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.c99f48ec.min.js"></script>
 <script>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});</script></body>
 </html>
